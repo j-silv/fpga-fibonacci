@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sat Mar 20 17:41:03 2021
+Fitter Status : Successful - Sat Mar 20 20:22:05 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : fibonacci
-Top-level Entity Name : baud_gen
+Top-level Entity Name : uart
 Family : MAX 10
 Device : 10M08DAF484C8G
 Timing Models : Final
-Total logic elements : 74 / 8,064 ( < 1 % )
-    Total combinational functions : 74 / 8,064 ( < 1 % )
-    Dedicated logic registers : 33 / 8,064 ( < 1 % )
-Total registers : 33
-Total pins : 4 / 250 ( 2 % )
+Total logic elements : 61 / 8,064 ( < 1 % )
+    Total combinational functions : 61 / 8,064 ( < 1 % )
+    Dedicated logic registers : 46 / 8,064 ( < 1 % )
+Total registers : 46
+Total pins : 12 / 250 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 0 / 387,072 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 48 ( 0 % )

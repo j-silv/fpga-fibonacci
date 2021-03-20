@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fibonacci
-Sat Mar 20 17:40:30 2021
+Sat Mar 20 20:21:47 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |uart|state
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |uart
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +46,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 20 17:40:30 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 20 20:21:47 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; fibonacci                                   ;
-; Top-level Entity Name              ; baud_gen                                    ;
+; Top-level Entity Name              ; uart                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 73                                          ;
-;     Total combinational functions  ; 73                                          ;
-;     Dedicated logic registers      ; 33                                          ;
-; Total registers                    ; 33                                          ;
-; Total pins                         ; 4                                           ;
+; Total logic elements               ; 60                                          ;
+;     Total combinational functions  ; 60                                          ;
+;     Dedicated logic registers      ; 46                                          ;
+; Total registers                    ; 46                                          ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,7 +71,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M08DAF484C8G     ;                    ;
-; Top-level entity name                                            ; baud_gen           ; fibonacci          ;
+; Top-level entity name                                            ; uart               ; fibonacci          ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -164,45 +168,45 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
-; hdl/baud_gen.vhd                 ; yes             ; User VHDL File  ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; hdl/uart.vhd                     ; yes             ; User VHDL File  ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 73      ;
-;                                             ;         ;
-; Total combinational functions               ; 73      ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 24      ;
-;     -- 3 input functions                    ; 1       ;
-;     -- <=2 input functions                  ; 48      ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 42      ;
-;     -- arithmetic mode                      ; 31      ;
-;                                             ;         ;
-; Total registers                             ; 33      ;
-;     -- Dedicated logic registers            ; 33      ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 4       ;
-;                                             ;         ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-;                                             ;         ;
-; Maximum fan-out node                        ; Add0~62 ;
-; Maximum fan-out                             ; 33      ;
-; Total fan-out                               ; 298     ;
-; Average fan-out                             ; 2.61    ;
-+---------------------------------------------+---------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 60        ;
+;                                             ;           ;
+; Total combinational functions               ; 60        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 14        ;
+;     -- 3 input functions                    ; 10        ;
+;     -- <=2 input functions                  ; 36        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 29        ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 46        ;
+;     -- Dedicated logic registers            ; 46        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 12        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 46        ;
+; Total fan-out                               ; 338       ;
+; Average fan-out                             ; 2.60      ;
++---------------------------------------------+-----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,9 +214,23 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |baud_gen                  ; 73 (73)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |baud_gen           ; baud_gen    ; work         ;
+; |uart                      ; 60 (60)             ; 46 (46)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |uart               ; uart        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |uart|state                                                                                             ;
++----------------------+------------------+---------------------+---------------------+----------------------+------------+
+; Name                 ; state.WAIT_RESET ; state.STOP_TRANSMIT ; state.DATA_TRANSMIT ; state.START_TRANSMIT ; state.IDLE ;
++----------------------+------------------+---------------------+---------------------+----------------------+------------+
+; state.IDLE           ; 0                ; 0                   ; 0                   ; 0                    ; 0          ;
+; state.START_TRANSMIT ; 0                ; 0                   ; 0                   ; 1                    ; 1          ;
+; state.DATA_TRANSMIT  ; 0                ; 0                   ; 1                   ; 0                    ; 1          ;
+; state.STOP_TRANSMIT  ; 0                ; 1                   ; 0                   ; 0                    ; 1          ;
+; state.WAIT_RESET     ; 1                ; 0                   ; 0                   ; 0                    ; 1          ;
++----------------------+------------------+---------------------+---------------------+----------------------+------------+
 
 
 +------------------------------------------------------+
@@ -220,14 +238,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 46    ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 39    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; tx~reg0                                ; 4       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |uart|shift_register[7]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |uart ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; DATA_LENGTH    ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -235,20 +282,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
-; cycloneiii_ff         ; 33                          ;
-;     CLR               ; 33                          ;
-; cycloneiii_lcell_comb ; 73                          ;
+; boundary_port         ; 12                          ;
+; cycloneiii_ff         ; 46                          ;
+;     CLR               ; 5                           ;
+;     ENA               ; 7                           ;
+;     ENA SCLR          ; 32                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 61                          ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 42                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 24                          ;
+;     normal            ; 30                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 14                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.20                        ;
-; Average LUT depth     ; 6.47                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.19                        ;
 +-----------------------+-----------------------------+
 
 
@@ -257,7 +307,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -267,12 +317,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 20 17:39:07 2021
+    Info: Processing started: Sat Mar 20 20:21:12 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fibonacci -c fibonacci
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file testbenches/tb_baud_gen.vhd
+    Info (12022): Found design unit 1: tb_baud_gen-bench File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_baud_gen.vhd Line: 7
+    Info (12023): Found entity 1: tb_baud_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_baud_gen.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/uart.vhd
-    Info (12022): Found design unit 1: uart-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd Line: 9
+    Info (12022): Found design unit 1: uart-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd Line: 21
     Info (12023): Found entity 1: uart File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/led_driver.vhd
     Info (12022): Found design unit 1: led_driver-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/led_driver.vhd Line: 8
@@ -284,20 +337,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/bli
     Info (12022): Found design unit 1: blinky-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/blinky.vhd Line: 8
     Info (12023): Found entity 1: blinky File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/blinky.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/baud_gen.vhd
-    Info (12022): Found design unit 1: baud_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 21
+    Info (12022): Found design unit 1: baud_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 25
     Info (12023): Found entity 1: baud_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 11
-Info (12127): Elaborating entity "baud_gen" for the top level hierarchy
+Info (12127): Elaborating entity "uart" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 74 logic cells
+    Info (21061): Implemented 60 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Sat Mar 20 17:40:30 2021
-    Info: Elapsed time: 00:01:23
-    Info: Total CPU time (on all processors): 00:01:53
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Sat Mar 20 20:21:47 2021
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:07
 
 

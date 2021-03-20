@@ -1,5 +1,5 @@
 Flow report for fibonacci
-Sat Mar 20 17:41:22 2021
+Sat Mar 20 20:22:26 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 20 17:41:11 2021       ;
+; Flow Status                        ; Successful - Sat Mar 20 20:22:26 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; fibonacci                                   ;
-; Top-level Entity Name              ; baud_gen                                    ;
+; Top-level Entity Name              ; uart                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08DAF484C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 74 / 8,064 ( < 1 % )                        ;
-;     Total combinational functions  ; 74 / 8,064 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 33 / 8,064 ( < 1 % )                        ;
-; Total registers                    ; 33                                          ;
-; Total pins                         ; 4 / 250 ( 2 % )                             ;
+; Total logic elements               ; 61 / 8,064 ( < 1 % )                        ;
+;     Total combinational functions  ; 61 / 8,064 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 46 / 8,064 ( < 1 % )                        ;
+; Total registers                    ; 46                                          ;
+; Total pins                         ; 12 / 250 ( 5 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 387,072 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 48 ( 0 % )                              ;
@@ -66,28 +66,30 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/20/2021 17:39:12 ;
+; Start date & time ; 03/20/2021 20:21:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; fibonacci           ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 57185453374949.161625835106484         ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; baud_gen    ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; baud_gen    ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; baud_gen    ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; baud_gen                               ; fibonacci     ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 57185453374949.161626807409440         ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; uart        ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; uart        ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; uart        ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; uart                                   ; fibonacci     ; --          ; --             ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -95,11 +97,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:22     ; 1.0                     ; 4788 MB             ; 00:01:52                           ;
-; Fitter               ; 00:00:31     ; 1.0                     ; 5290 MB             ; 00:00:26                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4679 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:09     ; 1.0                     ; 4757 MB             ; 00:00:09                           ;
-; Total                ; 00:02:06     ; --                      ; --                  ; 00:02:31                           ;
+; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 4806 MB             ; 00:01:06                           ;
+; Fitter               ; 00:00:16     ; 1.0                     ; 5289 MB             ; 00:00:17                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4680 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.0                     ; 4759 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4645 MB             ; 00:00:03                           ;
+; Total                ; 00:01:06     ; --                      ; --                  ; 00:01:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,6 +115,7 @@ refer to the applicable agreement for further details.
 ; Fitter               ; Justin           ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; Justin           ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Justin           ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Justin           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -122,6 +126,7 @@ quartus_map --read_settings_files=on --write_settings_files=off fibonacci -c fib
 quartus_fit --read_settings_files=off --write_settings_files=off fibonacci -c fibonacci
 quartus_asm --read_settings_files=off --write_settings_files=off fibonacci -c fibonacci
 quartus_sta fibonacci -c fibonacci
+quartus_eda --read_settings_files=off --write_settings_files=off fibonacci -c fibonacci
 
 
 
