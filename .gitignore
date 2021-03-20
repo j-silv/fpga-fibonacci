@@ -1,1 +1,8 @@
+# ignore visual studio code stuff
+.vscode/
 *.code-workspace
+
+# ignore unnecessary Quartus files
+db/
+incremental_db/
+
