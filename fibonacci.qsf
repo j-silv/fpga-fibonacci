@@ -396,7 +396,6 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name VHDL_FILE testbenches/tb_baud_gen.vhd
 set_global_assignment -name VHDL_FILE hdl/uart.vhd
 set_global_assignment -name VHDL_FILE hdl/led_driver.vhd
 set_global_assignment -name VHDL_FILE hdl/edge_divider.vhd

@@ -71,11 +71,11 @@ R12
 Abench
 R2
 R3
-Z20 DEx4 work 11 tb_baud_gen 0 22 AUlWEk0]IA^m9UONhA`JV3
+DEx4 work 11 tb_baud_gen 0 22 AUlWEk0]IA^m9UONhA`JV3
 l31
 L7
-Z21 VKgOM5SbDi^zY9d[TDa7E62
-Z22 !s100 8;XHbm7e3VVAJn9AA@=`a3
+VKgOM5SbDi^zY9d[TDa7E62
+!s100 8;XHbm7e3VVAJn9AA@=`a3
 R6
 32
 R16
@@ -83,6 +83,84 @@ R16
 R17
 R18
 R19
+!i113 1
+R11
+R12
+Etb_uart
+Z20 w1616268697
+R2
+R3
+R0
+Z21 8C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_uart.vhd
+Z22 FC:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_uart.vhd
+l0
+L4
+V7[j7ifUVN:AE7RHz`W[an2
+!s100 aCVUBcDd3DR5S5L07LKE:0
+R6
+32
+Z23 !s110 1616268703
+!i10b 1
+Z24 !s108 1616268703.000000
+Z25 !s90 -reportprogress|300|-work|work|C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_uart.vhd|
+Z26 !s107 C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_uart.vhd|
+!i113 1
+R11
+R12
+Abench
+R2
+R3
+DEx4 work 7 tb_uart 0 22 7[j7ifUVN:AE7RHz`W[an2
+l31
+L7
+V>JPYQnaAOPaG1h1R3SHG]0
+!s100 G]<znk28D0h3PT=8`E3dj1
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Euart
+Z27 w1616268064
+R2
+R3
+R0
+Z28 8C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd
+Z29 FC:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd
+l0
+L4
+V[C>O;bEYg]fLAUCCTj[JY3
+!s100 bif_8iajUP?UTD><Ph9@Z1
+R6
+32
+Z30 !s110 1616268661
+!i10b 1
+Z31 !s108 1616268661.000000
+Z32 !s90 -reportprogress|300|-work|work|C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd|
+Z33 !s107 C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd|
+!i113 1
+R11
+R12
+Alogic
+R2
+R3
+DEx4 work 4 uart 0 22 [C>O;bEYg]fLAUCCTj[JY3
+l31
+L21
+V;BJ>FQZQ6fSCmaGBY1UTZ3
+!s100 lDXMP^WUP@hLQ9XaTTUEW1
+R6
+32
+R30
+!i10b 1
+R31
+R32
+R33
 !i113 1
 R11
 R12
