@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat Mar 20 20:21:47 2021
+Analysis & Synthesis Status : Successful - Sat Mar 20 22:25:53 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : fibonacci
-Top-level Entity Name : uart
+Top-level Entity Name : fibonacci_gen
 Family : MAX 10
-Total logic elements : 60
-    Total combinational functions : 60
-    Dedicated logic registers : 46
-Total registers : 46
-Total pins : 12
+Total logic elements : 167
+    Total combinational functions : 167
+    Dedicated logic registers : 73
+Total registers : 73
+Total pins : 44
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
