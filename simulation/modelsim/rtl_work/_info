@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/simulation/modelsim
+Ebaud_gen
+Z1 w1616263382
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd
+Z5 FC:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd
+l0
+L11
+Vffhj;1jdaYe^b1OB5l`Zc1
+!s100 RJ=bLjJiTD6g6[Z[B3cXT2
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1616263426
+!i10b 1
+Z8 !s108 1616263426.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd|
+Z10 !s107 C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Alogic
+R2
+R3
+DEx4 work 8 baud_gen 0 22 ffhj;1jdaYe^b1OB5l`Zc1
+l48
+L25
+VhW<9QhS_J16d_fn<^;[]X1
+!s100 @MC?EY_>k9eZJ`VcK_j=e0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_baud_gen
+Z13 w1616262104
+R2
+R3
+R0
+Z14 8C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_baud_gen.vhd
+Z15 FC:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_baud_gen.vhd
+l0
+L4
+VAUlWEk0]IA^m9UONhA`JV3
+!s100 BJejVff?4g:`0RzTFG>=^0
+R6
+32
+Z16 !s110 1616263439
+!i10b 1
+Z17 !s108 1616263439.000000
+Z18 !s90 -reportprogress|300|-work|work|C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_baud_gen.vhd|
+Z19 !s107 C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/testbenches/tb_baud_gen.vhd|
+!i113 1
+R11
+R12
+Abench
+R2
+R3
+Z20 DEx4 work 11 tb_baud_gen 0 22 AUlWEk0]IA^m9UONhA`JV3
+l31
+L7
+Z21 VKgOM5SbDi^zY9d[TDa7E62
+Z22 !s100 8;XHbm7e3VVAJn9AA@=`a3
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12

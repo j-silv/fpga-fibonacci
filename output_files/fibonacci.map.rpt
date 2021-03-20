@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fibonacci
-Sat Mar 20 10:12:04 2021
+Sat Mar 20 17:40:30 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,10 +14,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |baud_gen
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +42,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 20 10:12:04 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 20 17:40:30 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; fibonacci                                   ;
 ; Top-level Entity Name              ; baud_gen                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 52                                          ;
-;     Total combinational functions  ; 52                                          ;
+; Total logic elements               ; 73                                          ;
+;     Total combinational functions  ; 73                                          ;
 ;     Dedicated logic registers      ; 33                                          ;
 ; Total registers                    ; 33                                          ;
 ; Total pins                         ; 4                                           ;
@@ -174,36 +173,36 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 52        ;
-;                                             ;           ;
-; Total combinational functions               ; 52        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 19        ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 32        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 21        ;
-;     -- arithmetic mode                      ; 31        ;
-;                                             ;           ;
-; Total registers                             ; 33        ;
-;     -- Dedicated logic registers            ; 33        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 4         ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 33        ;
-; Total fan-out                               ; 246       ;
-; Average fan-out                             ; 2.65      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 73      ;
+;                                             ;         ;
+; Total combinational functions               ; 73      ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 24      ;
+;     -- 3 input functions                    ; 1       ;
+;     -- <=2 input functions                  ; 48      ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 42      ;
+;     -- arithmetic mode                      ; 31      ;
+;                                             ;         ;
+; Total registers                             ; 33      ;
+;     -- Dedicated logic registers            ; 33      ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 4       ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; Add0~62 ;
+; Maximum fan-out                             ; 33      ;
+; Total fan-out                               ; 298     ;
+; Average fan-out                             ; 2.61    ;
++---------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,7 +210,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |baud_gen                  ; 52 (52)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |baud_gen           ; baud_gen    ; work         ;
+; |baud_gen                  ; 73 (73)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |baud_gen           ; baud_gen    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -231,19 +230,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |baud_gen ;
-+-------------------+-------+----------------------------------------------+
-; Parameter Name    ; Value ; Type                                         ;
-+-------------------+-------+----------------------------------------------+
-; BAUD_9600         ; 9600  ; Signed Integer                               ;
-; BAUD_19200        ; 19200 ; Signed Integer                               ;
-; BAUD_SELECT_9600  ; '0'   ; Enumerated                                   ;
-; BAUD_SELECT_19200 ; '1'   ; Enumerated                                   ;
-+-------------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -252,16 +238,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 4                           ;
 ; cycloneiii_ff         ; 33                          ;
 ;     CLR               ; 33                          ;
-; cycloneiii_lcell_comb ; 52                          ;
+; cycloneiii_lcell_comb ; 73                          ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 21                          ;
+;     normal            ; 42                          ;
 ;         1 data inputs ; 1                           ;
+;         2 data inputs ; 16                          ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 19                          ;
+;         4 data inputs ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.10                        ;
-; Average LUT depth     ; 6.10                        ;
+; Max LUT depth         ; 8.20                        ;
+; Average LUT depth     ; 6.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -270,7 +257,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -280,7 +267,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 20 10:11:26 2021
+    Info: Processing started: Sat Mar 20 17:39:07 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fibonacci -c fibonacci
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -297,20 +284,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/bli
     Info (12022): Found design unit 1: blinky-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/blinky.vhd Line: 8
     Info (12023): Found entity 1: blinky File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/blinky.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/baud_gen.vhd
-    Info (12022): Found design unit 1: baud_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 28
+    Info (12022): Found design unit 1: baud_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 21
     Info (12023): Found entity 1: baud_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 11
 Info (12127): Elaborating entity "baud_gen" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 77 logic cells
+    Info (21061): Implemented 74 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Sat Mar 20 10:12:04 2021
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:01:17
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Sat Mar 20 17:40:30 2021
+    Info: Elapsed time: 00:01:23
+    Info: Total CPU time (on all processors): 00:01:53
 
 

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Mar 20 10:12:04 2021
+Analysis & Synthesis Status : Successful - Sat Mar 20 17:40:30 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : fibonacci
 Top-level Entity Name : baud_gen
 Family : MAX 10
-Total logic elements : 52
-    Total combinational functions : 52
+Total logic elements : 73
+    Total combinational functions : 73
     Dedicated logic registers : 33
 Total registers : 33
 Total pins : 4
