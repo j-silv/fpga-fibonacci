@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fibonacci
-Sat Mar 20 22:25:53 2021
+Sat Mar 20 23:10:24 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,11 +14,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |fibonacci_gen
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +42,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 20 22:25:53 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 20 23:10:24 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; fibonacci                                   ;
-; Top-level Entity Name              ; fibonacci_gen                               ;
+; Top-level Entity Name              ; bin2bcd_12bit                               ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 167                                         ;
-;     Total combinational functions  ; 167                                         ;
-;     Dedicated logic registers      ; 73                                          ;
-; Total registers                    ; 73                                          ;
-; Total pins                         ; 44                                          ;
+; Total logic elements               ; 73                                          ;
+;     Total combinational functions  ; 73                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 28                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -69,7 +67,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M08DAF484C8G     ;                    ;
-; Top-level entity name                                            ; fibonacci_gen      ; fibonacci          ;
+; Top-level entity name                                            ; bin2bcd_12bit      ; fibonacci          ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,11 +156,10 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -171,7 +168,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ; Library ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
-; hdl/fibonacci_gen.vhd            ; yes             ; User VHDL File  ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/fibonacci_gen.vhd ;         ;
+; hdl/bin2bcd_12bit.vhd            ; yes             ; User VHDL File  ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd_12bit.vhd ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
 
 
@@ -180,30 +177,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 167         ;
+; Estimated Total logic elements              ; 73          ;
 ;                                             ;             ;
-; Total combinational functions               ; 167         ;
+; Total combinational functions               ; 73          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 27          ;
-;     -- 3 input functions                    ; 62          ;
-;     -- <=2 input functions                  ; 78          ;
+;     -- 4 input functions                    ; 65          ;
+;     -- 3 input functions                    ; 7           ;
+;     -- <=2 input functions                  ; 1           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 98          ;
-;     -- arithmetic mode                      ; 69          ;
+;     -- normal mode                          ; 73          ;
+;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
-; Total registers                             ; 73          ;
-;     -- Dedicated logic registers            ; 73          ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 44          ;
+; I/O pins                                    ; 28          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; process_0~0 ;
-; Maximum fan-out                             ; 74          ;
-; Total fan-out                               ; 757         ;
-; Average fan-out                             ; 2.31        ;
+; Maximum fan-out node                        ; LessThan0~0 ;
+; Maximum fan-out                             ; 8           ;
+; Total fan-out                               ; 326         ;
+; Average fan-out                             ; 2.53        ;
 +---------------------------------------------+-------------+
 
 
@@ -212,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
-; |fibonacci_gen             ; 167 (167)           ; 73 (73)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 44   ; 0            ; 0          ; |fibonacci_gen      ; fibonacci_gen ; work         ;
+; |bin2bcd_12bit             ; 73 (73)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |bin2bcd_12bit      ; bin2bcd_12bit ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -222,33 +219,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 73    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 72    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 72 bits   ; 144 LEs       ; 72 LEs               ; 72 LEs                 ; Yes        ; |fibonacci_gen|terme_actuel[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |fibonacci_gen ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; TAILLE_SORTIE  ; 32    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -256,23 +234,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 44                          ;
-; cycloneiii_ff         ; 73                          ;
-;     ENA               ; 64                          ;
-;     ENA SLD           ; 8                           ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 167                         ;
-;     arith             ; 69                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 62                          ;
-;     normal            ; 98                          ;
+; boundary_port         ; 28                          ;
+; cycloneiii_lcell_comb ; 82                          ;
+;     normal            ; 82                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 69                          ;
-;         4 data inputs ; 27                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 65                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.10                        ;
-; Average LUT depth     ; 6.17                        ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 8.79                        ;
 +-----------------------+-----------------------------+
 
 
@@ -281,7 +253,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -291,10 +263,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 20 22:25:22 2021
+    Info: Processing started: Sat Mar 20 23:09:41 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fibonacci -c fibonacci
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/bin2bcd_12bit.vhd
+    Info (12022): Found design unit 1: bin2bcd_12bit-Behavioral File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd_12bit.vhd Line: 17
+    Info (12023): Found entity 1: bin2bcd_12bit File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd_12bit.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/fibonacci_gen.vhd
     Info (12022): Found design unit 1: fibonacci_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/fibonacci_gen.vhd Line: 40
     Info (12023): Found entity 1: fibonacci_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/fibonacci_gen.vhd Line: 9
@@ -313,18 +288,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/bli
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/baud_gen.vhd
     Info (12022): Found design unit 1: baud_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 25
     Info (12023): Found entity 1: baud_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 11
-Info (12127): Elaborating entity "fibonacci_gen" for the top level hierarchy
+Info (12127): Elaborating entity "bin2bcd_12bit" for the top level hierarchy
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "thousands[3]" is stuck at GND File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd_12bit.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 211 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 167 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Sat Mar 20 22:25:53 2021
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:01:04
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 73 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Sat Mar 20 23:10:24 2021
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:01:18
 
 
