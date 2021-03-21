@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Mar 21 15:31:29 2021
+Analysis & Synthesis Status : Successful - Sun Mar 21 20:17:06 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : fibonacci
-Top-level Entity Name : bin2bcd
+Top-level Entity Name : n_ledseg_decoder
 Family : MAX 10
-Total logic elements : 73
-    Total combinational functions : 73
+Total logic elements : 0
+    Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 28
+Total pins : 44
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
