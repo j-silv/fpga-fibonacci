@@ -7,7 +7,6 @@ use ieee.std_logic_1164.all;
 entity ledseg_decoder is 
     port (
         decimal_in : in std_logic_vector(3 downto 0);
-
         -- decimal point not included
         ledseg_out : out std_logic_vector(6 downto 0)
     );

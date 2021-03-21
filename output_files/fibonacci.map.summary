@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Mar 21 20:17:06 2021
+Analysis & Synthesis Status : Successful - Sun Mar 21 20:33:28 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : fibonacci
 Top-level Entity Name : n_ledseg_decoder
 Family : MAX 10
-Total logic elements : 0
-    Total combinational functions : 0
+Total logic elements : 28
+    Total combinational functions : 28
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 44
