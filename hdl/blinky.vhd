@@ -17,7 +17,7 @@ architecture logic of blinky is
     signal led_temp : std_logic := '0';
 begin 
     process(clk) 
-    variable num_cycles : integer := 0;
+        variable num_cycles : integer := 0;
     begin 
     if rising_edge(clk) then
         if rst = '1' then
