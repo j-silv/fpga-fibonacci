@@ -6,5 +6,6 @@
 db/
 incremental_db/
 simulation/
+*.rpt
 
 docs/
