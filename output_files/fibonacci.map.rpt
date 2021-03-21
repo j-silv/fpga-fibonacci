@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fibonacci
-Sat Mar 20 23:10:24 2021
+Sun Mar 21 15:31:29 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |bin2bcd
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,10 +43,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 20 23:10:24 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 21 15:31:29 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; fibonacci                                   ;
-; Top-level Entity Name              ; bin2bcd_12bit                               ;
+; Top-level Entity Name              ; bin2bcd                                     ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; 73                                          ;
 ;     Total combinational functions  ; 73                                          ;
@@ -67,7 +68,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M08DAF484C8G     ;                    ;
-; Top-level entity name                                            ; bin2bcd_12bit      ; fibonacci          ;
+; Top-level entity name                                            ; bin2bcd            ; fibonacci          ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,13 +164,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
-; hdl/bin2bcd_12bit.vhd            ; yes             ; User VHDL File  ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd_12bit.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
+; hdl/bin2bcd.vhd                  ; yes             ; User VHDL File  ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -204,13 +205,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
-; |bin2bcd_12bit             ; 73 (73)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |bin2bcd_12bit      ; bin2bcd_12bit ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |bin2bcd                   ; 73 (73)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |bin2bcd            ; bin2bcd     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -227,6 +228,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |bin2bcd ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; BIN_IN_LENGTH  ; 12    ; Signed Integer                                 ;
+; NUM_BCD_DIGITS ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -253,7 +265,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -263,13 +275,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 20 23:09:41 2021
+    Info: Processing started: Sun Mar 21 15:30:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fibonacci -c fibonacci
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/bin2bcd_12bit.vhd
-    Info (12022): Found design unit 1: bin2bcd_12bit-Behavioral File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd_12bit.vhd Line: 17
-    Info (12023): Found entity 1: bin2bcd_12bit File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd_12bit.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/bin2bcd.vhd
+    Info (12022): Found design unit 1: bin2bcd-behavioral File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd.vhd Line: 25
+    Info (12023): Found entity 1: bin2bcd File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/fibonacci_gen.vhd
     Info (12022): Found design unit 1: fibonacci_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/fibonacci_gen.vhd Line: 40
     Info (12023): Found entity 1: fibonacci_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/fibonacci_gen.vhd Line: 9
@@ -288,9 +300,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/bli
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/baud_gen.vhd
     Info (12022): Found design unit 1: baud_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 25
     Info (12023): Found entity 1: baud_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 11
-Info (12127): Elaborating entity "bin2bcd_12bit" for the top level hierarchy
+Info (12127): Elaborating entity "bin2bcd" for the top level hierarchy
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "thousands[3]" is stuck at GND File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd_12bit.vhd Line: 13
+    Warning (13410): Pin "bcd_out[15]" is stuck at GND File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd.vhd Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -300,8 +312,8 @@ Info (21057): Implemented 101 device resources after synthesis - the final resou
     Info (21061): Implemented 73 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Sat Mar 20 23:10:24 2021
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:01:18
+    Info: Processing ended: Sun Mar 21 15:31:29 2021
+    Info: Elapsed time: 00:00:40
+    Info: Total CPU time (on all processors): 00:01:08
 
 

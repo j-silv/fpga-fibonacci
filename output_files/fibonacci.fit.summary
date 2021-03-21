@@ -1,7 +1,7 @@
-Fitter Status : Successful - Sat Mar 20 23:10:43 2021
+Fitter Status : Successful - Sun Mar 21 15:31:46 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : fibonacci
-Top-level Entity Name : bin2bcd_12bit
+Top-level Entity Name : bin2bcd
 Family : MAX 10
 Device : 10M08DAF484C8G
 Timing Models : Final
