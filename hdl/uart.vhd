@@ -7,10 +7,10 @@ entity uart is
     );
 
     port (
-        start_tr: in std_logic; -- start the transmission 
-        data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);  -- parallel data in
-        clk: in std_logic;
         rst: in std_logic;
+        data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);  -- parallel data in
+        start_tr: in std_logic; -- start the transmission 
+        clk: in std_logic;
 
         --UART transmit data out (in idle state the signal is HIGH)
         --start bit is an active LOW
