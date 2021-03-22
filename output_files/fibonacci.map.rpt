@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fibonacci
-Mon Mar 22 11:08:24 2021
+Mon Mar 22 11:34:19 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -51,112 +51,114 @@ refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 22 11:08:23 2021       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                      ; fibonacci                                   ;
-; Top-level Entity Name              ; system                                      ;
-; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 533                                         ;
-;     Total combinational functions  ; 533                                         ;
-;     Dedicated logic registers      ; 221                                         ;
-; Total registers                    ; 221                                         ;
-; Total pins                         ; 41                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Mar 22 11:34:19 2021       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; fibonacci                                   ;
+; Top-level Entity Name           ; system                                      ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 221                                         ;
+; Total pins                      ; 41                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; 10M08DAF484C8G     ;                    ;
-; Top-level entity name                                            ; system             ; fibonacci          ;
-; Family name                                                      ; MAX 10             ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC5C6F27C7     ;                    ;
+; Top-level entity name                                                           ; system             ; fibonacci          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -196,57 +198,52 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 533              ;
-;                                             ;                  ;
-; Total combinational functions               ; 533              ;
-; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 245              ;
-;     -- 3 input functions                    ; 79               ;
-;     -- <=2 input functions                  ; 209              ;
-;                                             ;                  ;
-; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 341              ;
-;     -- arithmetic mode                      ; 192              ;
-;                                             ;                  ;
-; Total registers                             ; 221              ;
-;     -- Dedicated logic registers            ; 221              ;
-;     -- I/O registers                        ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 41               ;
-;                                             ;                  ;
-; Embedded Multiplier 9-bit elements          ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; CLK_50_B7A~input ;
-; Maximum fan-out                             ; 175              ;
-; Total fan-out                               ; 2533             ;
-; Average fan-out                             ; 3.03             ;
-+---------------------------------------------+------------------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimate of Logic utilization (ALMs needed) ; 232                ;
+;                                             ;                    ;
+; Combinational ALUT usage for logic          ; 389                ;
+;     -- 7 input functions                    ; 0                  ;
+;     -- 6 input functions                    ; 73                 ;
+;     -- 5 input functions                    ; 39                 ;
+;     -- 4 input functions                    ; 46                 ;
+;     -- <=3 input functions                  ; 231                ;
+;                                             ;                    ;
+; Dedicated logic registers                   ; 221                ;
+;                                             ;                    ;
+; I/O pins                                    ; 41                 ;
+;                                             ;                    ;
+; Total DSP Blocks                            ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; CLOCK_50_B7A~input ;
+; Maximum fan-out                             ; 175                ;
+; Total fan-out                               ; 2194               ;
+; Average fan-out                             ; 3.17               ;
++---------------------------------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                               ;
-+--------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                     ; Entity Name      ; Library Name ;
-+--------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+------------------+--------------+
-; |system                                          ; 533 (1)             ; 221 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |system                                                                 ; system           ; work         ;
-;    |baud_gen:inst7|                              ; 83 (83)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|baud_gen:inst7                                                  ; baud_gen         ; work         ;
-;    |bin2bcd:inst6|                               ; 128 (128)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|bin2bcd:inst6                                                   ; bin2bcd          ; work         ;
-;    |blinky:inst5|                                ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|blinky:inst5                                                    ; blinky           ; work         ;
-;    |controller:inst8|                            ; 46 (46)             ; 35 (35)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|controller:inst8                                                ; controller       ; work         ;
-;    |edge_divider:inst3|                          ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|edge_divider:inst3                                              ; edge_divider     ; work         ;
-;    |fibonacci_gen:inst2|                         ; 92 (92)             ; 41 (41)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|fibonacci_gen:inst2                                             ; fibonacci_gen    ; work         ;
-;    |n_ledseg_decoder:inst1|                      ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|n_ledseg_decoder:inst1                                          ; n_ledseg_decoder ; work         ;
-;       |ledseg_decoder:\build_n_digits:0:decoder| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:0:decoder ; ledseg_decoder   ; work         ;
-;       |ledseg_decoder:\build_n_digits:1:decoder| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:1:decoder ; ledseg_decoder   ; work         ;
-;       |ledseg_decoder:\build_n_digits:2:decoder| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:2:decoder ; ledseg_decoder   ; work         ;
-;       |ledseg_decoder:\build_n_digits:3:decoder| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:3:decoder ; ledseg_decoder   ; work         ;
-;    |uart:inst|                                   ; 65 (65)             ; 46 (46)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|uart:inst                                                       ; uart             ; work         ;
-+--------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name      ; Library Name ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+------------------+--------------+
+; |system                                          ; 389 (1)             ; 221 (0)                   ; 0                 ; 0          ; 41   ; 0            ; |system                                                                 ; system           ; work         ;
+;    |baud_gen:inst7|                              ; 46 (46)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |system|baud_gen:inst7                                                  ; baud_gen         ; work         ;
+;    |bin2bcd:inst6|                               ; 62 (62)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|bin2bcd:inst6                                                   ; bin2bcd          ; work         ;
+;    |blinky:inst5|                                ; 53 (53)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |system|blinky:inst5                                                    ; blinky           ; work         ;
+;    |controller:inst8|                            ; 42 (42)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |system|controller:inst8                                                ; controller       ; work         ;
+;    |edge_divider:inst3|                          ; 52 (52)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |system|edge_divider:inst3                                              ; edge_divider     ; work         ;
+;    |fibonacci_gen:inst2|                         ; 50 (50)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |system|fibonacci_gen:inst2                                             ; fibonacci_gen    ; work         ;
+;    |n_ledseg_decoder:inst1|                      ; 28 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1                                          ; n_ledseg_decoder ; work         ;
+;       |ledseg_decoder:\build_n_digits:0:decoder| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:0:decoder ; ledseg_decoder   ; work         ;
+;       |ledseg_decoder:\build_n_digits:1:decoder| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:1:decoder ; ledseg_decoder   ; work         ;
+;       |ledseg_decoder:\build_n_digits:2:decoder| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:2:decoder ; ledseg_decoder   ; work         ;
+;       |ledseg_decoder:\build_n_digits:3:decoder| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:3:decoder ; ledseg_decoder   ; work         ;
+;    |uart:inst|                                   ; 55 (55)             ; 46 (46)                   ; 0                 ; 0          ; 0    ; 0            ; |system|uart:inst                                                       ; uart             ; work         ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -282,8 +279,8 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 221   ;
-; Number of registers using Synchronous Clear  ; 65    ;
-; Number of registers using Synchronous Load   ; 76    ;
+; Number of registers using Synchronous Clear  ; 192   ;
+; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 73    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 104   ;
@@ -301,17 +298,17 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|fibonacci_gen:inst2|terme_precedent[5] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |system|blinky:inst5|num_cycles[24]            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |system|edge_divider:inst3|num_cycles[11]      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |system|uart:inst|shift_register[2]            ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |system|controller:inst8|count[7]              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |system|fibonacci_gen:inst2|terme_actuel[6] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|blinky:inst5|num_cycles[21]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|edge_divider:inst3|num_cycles[26]   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |system|uart:inst|shift_register[2]         ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |system|controller:inst8|count[7]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -369,7 +366,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------+
 ; Parameter Name ; Value ; Type                                       ;
 +----------------+-------+--------------------------------------------+
-; NUM_DIGITS     ; 4     ; Signed Integer                             ;
+; num_digits     ; 4     ; Signed Integer                             ;
 +----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -400,29 +397,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 41                          ;
-; cycloneiii_ff         ; 221                         ;
-;     CLR               ; 41                          ;
-;     ENA               ; 36                          ;
+; arriav_ff             ; 221                         ;
+;     CLR               ; 10                          ;
+;     CLR SCLR          ; 31                          ;
+;     ENA               ; 8                           ;
 ;     ENA CLR SCLR      ; 32                          ;
-;     ENA SCLR          ; 32                          ;
-;     ENA SLD           ; 4                           ;
-;     SCLR              ; 1                           ;
-;     SLD               ; 72                          ;
-;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 538                         ;
-;     arith             ; 192                         ;
-;         2 data inputs ; 161                         ;
-;         3 data inputs ; 31                          ;
-;     normal            ; 346                         ;
+;     ENA SCLR          ; 64                          ;
+;     SCLR              ; 65                          ;
+;     SLD               ; 9                           ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 394                         ;
+;     arith             ; 184                         ;
+;         1 data inputs ; 167                         ;
+;         2 data inputs ; 17                          ;
+;     normal            ; 210                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 48                          ;
-;         4 data inputs ; 245                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 38                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 46                          ;
+;         5 data inputs ; 39                          ;
+;         6 data inputs ; 73                          ;
+; boundary_port         ; 41                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 6.12                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -431,7 +430,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -441,12 +440,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Mar 22 11:07:39 2021
+    Info: Processing started: Mon Mar 22 11:33:35 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fibonacci -c fibonacci
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pins.v
-    Info (12023): Found entity 1: baseline_c5gx File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/pins.v Line: 38
+    Info (12023): Found entity 1: pins File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/pins.v Line: 38
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/controller.vhd
     Info (12022): Found design unit 1: controller-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/controller.vhd Line: 26
     Info (12023): Found entity 1: controller File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/controller.vhd Line: 10
@@ -495,14 +494,14 @@ Info (12128): Elaborating entity "blinky" for hierarchy "blinky:inst5"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 577 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 494 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 30 output pins
-    Info (21061): Implemented 536 logic cells
+    Info (21061): Implemented 453 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Mon Mar 22 11:08:24 2021
-    Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:01:12
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Mon Mar 22 11:34:19 2021
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:01:10
 
 

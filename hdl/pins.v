@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Title:        baseline_pinout.v                                          //
+// Title:        pins.v                                                     //
 // Rev:          Rev 1.0                                                    //
 // Last Revised: 10/13/2015 by Geraldine Baniqued                           //
 //--------------------------------------------------------------------------//
@@ -35,7 +35,7 @@
 //`define ENABLE_REFCLK
 //`define ENABLE_GPIO
 
-module baseline_c5gx(
+module pins(
 
       ///////// ADC ///////// 1.2 V ///////
       output             ADC_CONVST,

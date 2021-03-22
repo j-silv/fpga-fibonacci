@@ -1,16 +1,17 @@
-Analysis & Synthesis Status : Successful - Mon Mar 22 11:08:23 2021
+Analysis & Synthesis Status : Successful - Mon Mar 22 11:34:19 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : fibonacci
 Top-level Entity Name : system
-Family : MAX 10
-Total logic elements : 533
-    Total combinational functions : 533
-    Dedicated logic registers : 221
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
 Total registers : 221
 Total pins : 41
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
 Total PLLs : 0
-UFM blocks : 0
-ADC blocks : 0
+Total DLLs : 0
