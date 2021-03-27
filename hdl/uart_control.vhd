@@ -90,8 +90,8 @@ begin
                         state <= WAIT_EOT;
                     end if;
 
-                -- before sending new char, make TX request line in 
-                -- 50 MHz clkc domain has gone low
+                -- before sending new char, make sure TX request line in 
+                -- 50 MHz clk domain has gone low
                 when WAIT_RESET =>
                     if TX_REQ_IN = '0' then
                         state <= IDLE;
