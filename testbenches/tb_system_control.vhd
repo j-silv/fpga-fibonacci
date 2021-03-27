@@ -59,7 +59,7 @@ begin
                    '0' after 30 ns,
                    '1' after 470 ns,
                    '0' after 490 ns;
-		
+            
       wait;
    end process;
 end;
