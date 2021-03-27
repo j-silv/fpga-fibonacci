@@ -5,129 +5,127 @@
 -- detect a data transmission request
 ------------------------------------------------------------
 -- TASK 2:
--- communicate with UART peripheral (slave) by setting
--- a START bit, shifting data byte through one bit at a time
--- and concluding transmission with a STOP bit
+-- acknowledge TX request from UART controller (master) 
+-- by setting the TX_DONE flag low
 ------------------------------------------------------------
 -- TASK 3:
+-- 1) send start bit via TX serial line
+-- 2) shift data byte through one bit at a time 
+-- 3) send stop bit and stop transmission
+------------------------------------------------------------
+-- TASK 4:
 -- indicate to uart_control block that transmission is done
--- and wait for data transmission request line to go high
--- before reintializing and returning to IDLE state
+-- by setting TX_DONE flag high
 ------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
 
--- ************** NEEDS TO BE REFACTORED *******************
+entity uart_transmit is 
+    generic (
+        constant DATA_LENGTH : integer := 8
+    );
 
--- entity uart is 
---     generic (
---         constant DATA_LENGTH : integer := 8
---     );
+    port (
+        rst: in std_logic;
 
---     port (
---         rst: in std_logic;
---         data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);  -- parallel data in
---         tx_req: in std_logic; 
---         baud_clk: in std_logic;
+        -- clock coming from baud rate generator
+        clk: in std_logic;
 
---         --UART transmit data out (in idle state the signal is HIGH)
---         --start bit is an active LOW
---         tx: out std_logic := '1'
+        -- parallel data in
+        data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);
+
+        -- request line coming from uart_control block
+        TX_REQ_IN: in std_logic; 
+
+		TX_DONE: out std_logic := '1';
+
+        --UART transmit data out
+        --start bit is an active LOW
+        UART_TX: out std_logic := '1'
 		
--- 		transmit_done: out std_logic := '1'
---     );  
--- end entity;
+    );  
+end entity;
 
--- architecture logic of uart is 
+architecture logic of uart_transmit is 
 
--- 	-- state machine
--- 	type state_type is (IDLE, START_TRANSMIT, DATA_TRANSMIT, STOP_TRANSMIT);
+	-- state machine
+	type state_type is (IDLE, DATA_TX, END_TX);
+	signal state : state_type;
 
--- 	-- register to hold the current state
--- 	signal state : state_type;
+    signal shift_register : std_logic_vector((DATA_LENGTH-1) downto 0) := (others => '0');
 
---     signal shift_register : std_logic_vector((DATA_LENGTH-1) downto 0) := (others => '0');
+begin
 
--- begin
-
---     process (baud_clk, rst)
---         variable bits_sent : integer := 0;
---     begin
---         -- asynchronous reset
---         if rst = '1' then
+    process (clk, rst)
+        variable bits_sent : integer := 0;
+    begin
+        -- asynchronous reset
+        if rst = '1' then
 		
--- 			shift_register <= (others => '0');
--- 			tx <= '1';
--- 			bits_sent := 0;
--- 			transmit_done <= '1';
---             state <= IDLE;
+			shift_register <= (others => '0');
+			UART_TX <= '1';
+			bits_sent := 0;
+			TX_DONE <= '1';
+            state <= IDLE;
 
---         elsif rising_edge(baud_clk) then
---             case state is
-
---                 -- in this state, we're waiting for user to start transmission 
---                 -- by setting the start_tx pin HIGH
---                 when IDLE =>
-
---                     -- transmit line will stay high until transmission starts
---                     tx <= '1';
+        elsif rising_edge(clk) then
+            case state is
+                when IDLE =>
 					
---                     -- has the user started a transmission?
---                     if tx_req = '1' then 
-					
--- 						-- reset transmit_done bit
--- 						transmit_done <= '0';
+                    if TX_REQ_IN = '1' then 
+
+                        -- let uart_control know that a TX is underway
+						TX_DONE <= '0';
+			
+                        -- send start bit
+                        UART_TX <= '0'; 
+
+                        -- load shift register 
+                        shift_register <= data_in;
+
+                        state <= DATA_TX;
 						
---                         -- next clock edge send the start bit
---                         state <= START_TRANSMIT;
-						
---                     else
--- 						-- not currently transmitting
--- 						transmit_done <= '1';
-						
---                         -- otherwise stay in this state
---                         state <= IDLE;
---                     end if;
+                    else
+						-- not currently transmitting
+                        UART_TX <= '1';
+						TX_DONE <= '1';
+                        state <= IDLE;
+                    end if;
 
---                 -- in this state, we are sending the start bit for UART communication
---                 when START_TRANSMIT =>
+                when DATA_TX =>
 
---                     -- start bit
---                     tx <= '0';
+                    -- are we done sending the data byte?
+                    if bits_sent >= DATA_LENGTH then
 
---                     -- load shift register 
---                     shift_register <= data_in;
+                        bits_sent := 0;
 
---                     -- start data transmission
---                     state <= DATA_TRANSMIT;
+                        -- send STOP bit
+                        UART_TX <= '1';
 
---                 -- in this state, we are sending the actual data
---                 when DATA_TRANSMIT =>
+                        state <= END_TX;
 
---                     -- are we done sending the data?
---                     if bits_sent >= DATA_LENGTH then
+                    else
+                        -- serial out the MSB of the shift_register
+                        UART_TX <= shift_register(DATA_LENGTH-1);
 
---                         -- reset number of bits sent
---                         bits_sent := 0;
---                         state <= STOP_TRANSMIT;
---                     else
---                         -- serial out
---                         tx <= shift_register(7);
+                        -- increment number of bits sent
+                        bits_sent := bits_sent + 1; 
 
---                         -- increment number of bits sent
---                         bits_sent := bits_sent + 1; 
-
---                         -- shift bits
---                         for i in 0 to (DATA_LENGTH-2) loop
---                             shift_register(i+1) <= shift_register(i);	
---                         end loop;    
+                        -- shift bits
+                        for i in 0 to (DATA_LENGTH-2) loop
+                            shift_register(i+1) <= shift_register(i);	
+                        end loop;    
                         
---                         state <= DATA_TRANSMIT;
---                     end if;			
+                        state <= DATA_TX;
+                    end if;
+
+                -- an explicit state is included for the end of transmission
+                -- so that the STOP bit has time to be sent
+                when END_TX => 
+                    TX_DONE <= '1';
 					
--- 				end if;
---             end case;
---         end if;
---     end process;
--- end architecture;
+            end case;
+		end if;
+    end process;
+end architecture;

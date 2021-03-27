@@ -7,40 +7,45 @@ end tb_uart_transmit;
 architecture bench of tb_uart_transmit is 
     constant DATA_LENGTH : integer := 8;
     
-    signal start_tr : std_logic :='0';
-    signal data_in: std_logic_vector((DATA_LENGTH-1) downto 0);
-    signal clk : std_logic := '0';
     signal rst : std_logic := '0';
-    signal tx : std_logic;
+    signal clk : std_logic := '0';
+    signal data_in: std_logic_vector((DATA_LENGTH-1) downto 0);
+    signal TX_REQ_IN : std_logic :='0';
 
-    component uart is 
+    signal TX_DONE : std_logic;
+    signal UART_TX : std_logic;
+    
+
+    component uart_transmit is 
       generic (
           constant DATA_LENGTH : integer := 8
       );
 
       port (
-          start_tr: in std_logic;
-          data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);
-          clk: in std_logic;
-          rst: in std_logic;
-          tx: out std_logic := '1'
+        rst: in std_logic;
+        clk: in std_logic;
+        data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);
+        TX_REQ_IN: in std_logic; 
+		TX_DONE: out std_logic;
+        UART_TX: out std_logic
       );  
 
-    end component uart;
+    end component uart_transmit;
 
 begin
 
-  inst_uart_transmit : uart
+  inst_uart_transmit : uart_transmit
     generic map (
       DATA_LENGTH => DATA_LENGTH
     )
     
     port map (
-        start_tr => start_tr,
-        data_in => data_in,
         clk => clk,
         rst => rst,
-        tx => tx
+        TX_REQ_IN => TX_REQ_IN,
+        data_in => data_in,
+        TX_DONE => TX_DONE,
+        UART_TX => UART_TX
     );
   
     clk <= not(clk) after 10 ns;
@@ -48,10 +53,10 @@ begin
     rst  <= '1',
             '0' after 15 ns;
 
-    data_in <= x"AA", -- 10101010
-               x"00" after 113 ns;
-            
-    start_tr <= '0', 
-                '1' after 32 ns;
+    data_in <= x"F0", -- 1111 0000
+               x"00" after 90 ns;
+    
+    TX_REQ_IN <= '1' after 45 ns,
+                 '0' after 95 ns;
             
 end bench;
