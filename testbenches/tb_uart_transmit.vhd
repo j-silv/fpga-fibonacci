@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity tb_uart is
-end tb_uart;
+entity tb_uart_transmit is
+end tb_uart_transmit;
 
-architecture bench of tb_uart is 
+architecture bench of tb_uart_transmit is 
     constant DATA_LENGTH : integer := 8;
     
     signal start_tr : std_logic :='0';
@@ -30,7 +30,7 @@ architecture bench of tb_uart is
 
 begin
 
-  inst_uart : uart
+  inst_uart_transmit : uart
     generic map (
       DATA_LENGTH => DATA_LENGTH
     )

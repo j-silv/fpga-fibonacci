@@ -1,6 +1,3 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
 --==========================================================
 -- Controller block for the system
 --==========================================================
@@ -13,6 +10,8 @@ use ieee.std_logic_1164.all;
 -- send CR control character for PC serial terminal
 ------------------------------------------------------------
 
+library ieee;
+use ieee.std_logic_1164.all;
 
 entity system_control is 
     generic(
