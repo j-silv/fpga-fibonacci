@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 -- COMMON ANODE LED 7 SEGMENT DECODER (n digits)
 -- Segments: G F E D C B A
 
-entity ledseg_decoder is 
+entity ledseg_decoder is
     port (
         decimal_in : in std_logic_vector(3 downto 0);
         -- decimal point not included
@@ -12,12 +12,12 @@ entity ledseg_decoder is
     );
 end entity;
 
-architecture logic of ledseg_decoder is 
+architecture logic of ledseg_decoder is
 begin
     process (decimal_in)
     begin
-        case (decimal_in) is 
-            when x"0"  => ledseg_out <= b"1000000";
+        case (decimal_in) is
+            when x"0" => ledseg_out <= b"1000000";
             when x"1" => ledseg_out <= b"1111001";
             when x"2" => ledseg_out <= b"0100100";
             when x"3" => ledseg_out <= b"0110000";
@@ -28,7 +28,7 @@ begin
             when x"8" => ledseg_out <= b"0000000";
             when x"9" => ledseg_out <= b"0010000";
 
-            -- invalid inputs turn off all segments
+                -- invalid inputs turn off all segments
             when others => ledseg_out <= b"1111111";
         end case;
     end process;

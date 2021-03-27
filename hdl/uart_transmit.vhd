@@ -21,7 +21,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity uart_transmit is 
+entity uart_transmit is
     generic (
         constant DATA_LENGTH : integer := 8
     );
@@ -29,32 +29,32 @@ entity uart_transmit is
     port (
 
         -- parallel data in
-        data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);
+        data_in : in std_logic_vector((DATA_LENGTH - 1) downto 0);
 
         -- request line coming from uart_control block
-        TX_REQ_IN: in std_logic; 
+        TX_REQ_IN : in std_logic;
 
-        rst: in std_logic;
+        rst : in std_logic;
 
         -- clock coming from baud rate generator
-        clk: in std_logic;
+        clk : in std_logic;
 
         --UART transmit data out
         --start bit is an active LOW
-        UART_TX: out std_logic := '1';
+        UART_TX : out std_logic := '1';
 
-        TX_DONE: out std_logic := '1'
-		
-    );  
+        TX_DONE : out std_logic := '1'
+
+    );
 end entity;
 
-architecture logic of uart_transmit is 
+architecture logic of uart_transmit is
 
-	-- state machine
-	type state_type is (IDLE, DATA_TX, END_TX);
-	signal state : state_type;
+    -- state machine
+    type state_type is (IDLE, DATA_TX, END_TX);
+    signal state : state_type;
 
-    signal shift_register : std_logic_vector((DATA_LENGTH-1) downto 0) := (others => '0');
+    signal shift_register : std_logic_vector((DATA_LENGTH - 1) downto 0) := (others => '0');
 
 begin
 
@@ -63,34 +63,32 @@ begin
     begin
         -- asynchronous reset
         if rst = '1' then
-		
-			shift_register <= (others => '0');
-			UART_TX <= '1';
-			bits_sent := 0;
-			TX_DONE <= '1';
+            shift_register <= (others => '0');
+            UART_TX <= '1';
+            bits_sent := 0;
+            TX_DONE <= '1';
             state <= IDLE;
 
         elsif rising_edge(clk) then
             case state is
                 when IDLE =>
-					
-                    if TX_REQ_IN = '1' then 
+                    if TX_REQ_IN = '1' then
 
                         -- let uart_control know that a TX is underway
-						TX_DONE <= '0';
-			
+                        TX_DONE <= '0';
+
                         -- send start bit
-                        UART_TX <= '0'; 
+                        UART_TX <= '0';
 
                         -- load shift register 
                         shift_register <= data_in;
 
                         state <= DATA_TX;
-						
+
                     else
-						-- not currently transmitting
+                        -- not currently transmitting
                         UART_TX <= '1';
-						TX_DONE <= '1';
+                        TX_DONE <= '1';
                         state <= IDLE;
                     end if;
 
@@ -108,25 +106,25 @@ begin
 
                     else
                         -- serial out the MSB of the shift_register
-                        UART_TX <= shift_register(DATA_LENGTH-1);
+                        UART_TX <= shift_register(DATA_LENGTH - 1);
 
                         -- increment number of bits sent
-                        bits_sent := bits_sent + 1; 
+                        bits_sent := bits_sent + 1;
 
                         -- shift bits
-                        for i in 0 to (DATA_LENGTH-2) loop
-                            shift_register(i+1) <= shift_register(i);	
-                        end loop;    
-                        
+                        for i in 0 to (DATA_LENGTH - 2) loop
+                            shift_register(i + 1) <= shift_register(i);
+                        end loop;
+
                         state <= DATA_TX;
                     end if;
 
                 -- an explicit state is included for the end of transmission
                 -- so that the STOP bit has time to be sent
-                when END_TX => 
+                when END_TX =>
                     TX_DONE <= '1';
-					
+
             end case;
-		end if;
+        end if;
     end process;
 end architecture;

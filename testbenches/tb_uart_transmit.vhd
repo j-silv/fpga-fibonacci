@@ -26,7 +26,7 @@ architecture bench of tb_uart_transmit is
         clk: in std_logic;
         data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);
         TX_REQ_IN: in std_logic; 
-		TX_DONE: out std_logic;
+        TX_DONE: out std_logic;
         UART_TX: out std_logic
       );  
 
