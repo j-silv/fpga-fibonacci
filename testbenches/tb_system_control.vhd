@@ -1,11 +1,11 @@
 library ieee;
 use ieee.std_logic_1164.all;
  
-entity tb_controller is
-end tb_controller;
+entity tb_system_control is
+end tb_system_control;
  
-architecture behavior of tb_controller is 
-    component controller
+architecture behavior of tb_system_control is 
+    component system_control
         generic(
             clk_cycle_delay : integer
         );
@@ -17,7 +17,7 @@ architecture behavior of tb_controller is
         );     
     end component;
 
-    constant clk_cycle_delay : integer := 1;
+    constant clk_cycle_delay : integer := 5;
 
     signal rst : std_logic;
     signal data_in : std_logic;
@@ -28,7 +28,7 @@ architecture behavior of tb_controller is
 
 begin
  
-    uut: controller 
+    uut: system_control 
         generic map (
             clk_cycle_delay => clk_cycle_delay
         )
@@ -57,8 +57,8 @@ begin
         data_in <= '0',
                    '1' after 10 ns,
                    '0' after 30 ns,
-                   '1' after 90 ns,
-                   '0' after 110 ns;
+                   '1' after 470 ns,
+                   '0' after 490 ns;
 		
       wait;
    end process;
