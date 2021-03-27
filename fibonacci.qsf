@@ -740,10 +740,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6]
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE hdl/uart_transmit.vhd
 set_global_assignment -name VHDL_FILE hdl/uart_control.vhd
 set_global_assignment -name VHDL_FILE hdl/system_control.vhd
@@ -758,3 +754,7 @@ set_global_assignment -name VHDL_FILE hdl/fibonacci_gen.vhd
 set_global_assignment -name VHDL_FILE hdl/edge_divider.vhd
 set_global_assignment -name VHDL_FILE hdl/blinky.vhd
 set_global_assignment -name VHDL_FILE hdl/baud_gen.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -27,10 +27,6 @@ entity uart_transmit is
     );
 
     port (
-        rst: in std_logic;
-
-        -- clock coming from baud rate generator
-        clk: in std_logic;
 
         -- parallel data in
         data_in: in std_logic_vector((DATA_LENGTH-1) downto 0);
@@ -38,11 +34,16 @@ entity uart_transmit is
         -- request line coming from uart_control block
         TX_REQ_IN: in std_logic; 
 
-		TX_DONE: out std_logic := '1';
+        rst: in std_logic;
+
+        -- clock coming from baud rate generator
+        clk: in std_logic;
 
         --UART transmit data out
         --start bit is an active LOW
-        UART_TX: out std_logic := '1'
+        UART_TX: out std_logic := '1';
+
+        TX_DONE: out std_logic := '1'
 		
     );  
 end entity;

@@ -26,11 +26,11 @@ use ieee.std_logic_1164.all;
 
 entity uart_control is
     port (
-        rst : in std_logic;
-        clk : in std_logic;
-
         -- tx request line from 50 MHz clock domain
         TX_REQ_IN : in std_logic;
+
+        rst : in std_logic;
+        clk : in std_logic;
 
         -- uart_transmit flag
         TX_DONE : in std_logic;

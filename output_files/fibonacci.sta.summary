@@ -3,63 +3,63 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50_B7A'
-Slack : -7.486
-TNS   : -563.553
+Slack : -7.556
+TNS   : -604.941
 
 Type  : Slow 1100mV 85C Model Setup 'baud_gen:inst7|baud_out_temp'
-Slack : -4.125
-TNS   : -172.480
+Slack : -4.091
+TNS   : -193.079
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50_B7A'
-Slack : 0.435
+Slack : 0.342
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'baud_gen:inst7|baud_out_temp'
-Slack : 0.504
+Slack : 0.425
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50_B7A'
-Slack : -0.565
-TNS   : -141.247
+Slack : -0.647
+TNS   : -145.988
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'baud_gen:inst7|baud_out_temp'
 Slack : -0.538
-TNS   : -41.223
+TNS   : -46.945
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50_B7A'
-Slack : -7.946
-TNS   : -570.737
+Slack : -7.905
+TNS   : -613.296
 
 Type  : Slow 1100mV 0C Model Setup 'baud_gen:inst7|baud_out_temp'
-Slack : -4.111
-TNS   : -171.351
+Slack : -3.937
+TNS   : -191.301
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50_B7A'
-Slack : 0.440
-TNS   : 0.000
+Slack : -0.019
+TNS   : -0.019
 
 Type  : Slow 1100mV 0C Model Hold 'baud_gen:inst7|baud_out_temp'
-Slack : 0.491
+Slack : 0.429
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50_B7A'
-Slack : -0.643
-TNS   : -147.019
+Slack : -0.692
+TNS   : -151.022
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'baud_gen:inst7|baud_out_temp'
 Slack : -0.538
-TNS   : -40.723
+TNS   : -46.795
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50_B7A'
-Slack : -3.651
-TNS   : -196.825
+Slack : -3.564
+TNS   : -215.150
 
 Type  : Fast 1100mV 85C Model Setup 'baud_gen:inst7|baud_out_temp'
-Slack : -1.682
-TNS   : -66.555
+Slack : -1.643
+TNS   : -81.049
 
 Type  : Fast 1100mV 85C Model Hold 'baud_gen:inst7|baud_out_temp'
-Slack : 0.153
+Slack : 0.145
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50_B7A'
@@ -67,35 +67,35 @@ Slack : 0.180
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50_B7A'
-Slack : -0.561
-TNS   : -18.787
+Slack : -0.579
+TNS   : -19.309
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'baud_gen:inst7|baud_out_temp'
-Slack : -0.073
-TNS   : -1.218
+Slack : -0.061
+TNS   : -1.636
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50_B7A'
-Slack : -3.416
-TNS   : -169.409
+Slack : -3.292
+TNS   : -186.355
 
 Type  : Fast 1100mV 0C Model Setup 'baud_gen:inst7|baud_out_temp'
-Slack : -1.500
-TNS   : -59.297
-
-Type  : Fast 1100mV 0C Model Hold 'baud_gen:inst7|baud_out_temp'
-Slack : 0.141
-TNS   : 0.000
+Slack : -1.509
+TNS   : -71.047
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50_B7A'
-Slack : 0.170
+Slack : 0.009
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'baud_gen:inst7|baud_out_temp'
+Slack : 0.126
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50_B7A'
-Slack : -0.564
-TNS   : -18.352
+Slack : -0.558
+TNS   : -18.820
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'baud_gen:inst7|baud_out_temp'
-Slack : -0.026
-TNS   : -0.271
+Slack : -0.022
+TNS   : -0.583
 
 ------------------------------------------------------------

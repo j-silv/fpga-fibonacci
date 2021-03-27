@@ -1,5 +1,5 @@
 Timing Analyzer report for fibonacci
-Mon Mar 22 11:36:26 2021
+Sat Mar 27 11:56:00 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,12 +99,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.11        ;
+; Average used               ; 1.13        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  10.6%      ;
+;     Processor 2            ;  12.9%      ;
 +----------------------------+-------------+
 
 
@@ -123,8 +123,8 @@ refer to the applicable agreement for further details.
 +------------+-----------------+------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
 +------------+-----------------+------------------------------+------+
-; 117.84 MHz ; 117.84 MHz      ; CLOCK_50_B7A                 ;      ;
-; 195.12 MHz ; 195.12 MHz      ; baud_gen:inst7|baud_out_temp ;      ;
+; 116.88 MHz ; 116.88 MHz      ; CLOCK_50_B7A                 ;      ;
+; 196.43 MHz ; 196.43 MHz      ; baud_gen:inst7|baud_out_temp ;      ;
 +------------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -140,8 +140,8 @@ HTML report is unavailable in plain text report export.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50_B7A                 ; -7.486 ; -563.553      ;
-; baud_gen:inst7|baud_out_temp ; -4.125 ; -172.480      ;
+; CLOCK_50_B7A                 ; -7.556 ; -604.941      ;
+; baud_gen:inst7|baud_out_temp ; -4.091 ; -193.079      ;
 +------------------------------+--------+---------------+
 
 
@@ -150,8 +150,8 @@ HTML report is unavailable in plain text report export.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; CLOCK_50_B7A                 ; 0.435 ; 0.000         ;
-; baud_gen:inst7|baud_out_temp ; 0.504 ; 0.000         ;
+; CLOCK_50_B7A                 ; 0.342 ; 0.000         ;
+; baud_gen:inst7|baud_out_temp ; 0.425 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -172,8 +172,8 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50_B7A                 ; -0.565 ; -141.247      ;
-; baud_gen:inst7|baud_out_temp ; -0.538 ; -41.223       ;
+; CLOCK_50_B7A                 ; -0.647 ; -145.988      ;
+; baud_gen:inst7|baud_out_temp ; -0.538 ; -46.945       ;
 +------------------------------+--------+---------------+
 
 
@@ -188,8 +188,8 @@ No synchronizer chains to report.
 +------------+-----------------+------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
 +------------+-----------------+------------------------------+------+
-; 111.78 MHz ; 111.78 MHz      ; CLOCK_50_B7A                 ;      ;
-; 195.66 MHz ; 195.66 MHz      ; baud_gen:inst7|baud_out_temp ;      ;
+; 112.3 MHz  ; 112.3 MHz       ; CLOCK_50_B7A                 ;      ;
+; 202.55 MHz ; 202.55 MHz      ; baud_gen:inst7|baud_out_temp ;      ;
 +------------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -199,19 +199,19 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50_B7A                 ; -7.946 ; -570.737      ;
-; baud_gen:inst7|baud_out_temp ; -4.111 ; -171.351      ;
+; CLOCK_50_B7A                 ; -7.905 ; -613.296      ;
+; baud_gen:inst7|baud_out_temp ; -3.937 ; -191.301      ;
 +------------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                    ;
-+------------------------------+-------+---------------+
-; Clock                        ; Slack ; End Point TNS ;
-+------------------------------+-------+---------------+
-; CLOCK_50_B7A                 ; 0.440 ; 0.000         ;
-; baud_gen:inst7|baud_out_temp ; 0.491 ; 0.000         ;
-+------------------------------+-------+---------------+
++-------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                     ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; CLOCK_50_B7A                 ; -0.019 ; -0.019        ;
+; baud_gen:inst7|baud_out_temp ; 0.429  ; 0.000         ;
++------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -231,8 +231,8 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50_B7A                 ; -0.643 ; -147.019      ;
-; baud_gen:inst7|baud_out_temp ; -0.538 ; -40.723       ;
+; CLOCK_50_B7A                 ; -0.692 ; -151.022      ;
+; baud_gen:inst7|baud_out_temp ; -0.538 ; -46.795       ;
 +------------------------------+--------+---------------+
 
 
@@ -247,8 +247,8 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50_B7A                 ; -3.651 ; -196.825      ;
-; baud_gen:inst7|baud_out_temp ; -1.682 ; -66.555       ;
+; CLOCK_50_B7A                 ; -3.564 ; -215.150      ;
+; baud_gen:inst7|baud_out_temp ; -1.643 ; -81.049       ;
 +------------------------------+--------+---------------+
 
 
@@ -257,7 +257,7 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; baud_gen:inst7|baud_out_temp ; 0.153 ; 0.000         ;
+; baud_gen:inst7|baud_out_temp ; 0.145 ; 0.000         ;
 ; CLOCK_50_B7A                 ; 0.180 ; 0.000         ;
 +------------------------------+-------+---------------+
 
@@ -279,8 +279,8 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50_B7A                 ; -0.561 ; -18.787       ;
-; baud_gen:inst7|baud_out_temp ; -0.073 ; -1.218        ;
+; CLOCK_50_B7A                 ; -0.579 ; -19.309       ;
+; baud_gen:inst7|baud_out_temp ; -0.061 ; -1.636        ;
 +------------------------------+--------+---------------+
 
 
@@ -295,8 +295,8 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50_B7A                 ; -3.416 ; -169.409      ;
-; baud_gen:inst7|baud_out_temp ; -1.500 ; -59.297       ;
+; CLOCK_50_B7A                 ; -3.292 ; -186.355      ;
+; baud_gen:inst7|baud_out_temp ; -1.509 ; -71.047       ;
 +------------------------------+--------+---------------+
 
 
@@ -305,8 +305,8 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; baud_gen:inst7|baud_out_temp ; 0.141 ; 0.000         ;
-; CLOCK_50_B7A                 ; 0.170 ; 0.000         ;
+; CLOCK_50_B7A                 ; 0.009 ; 0.000         ;
+; baud_gen:inst7|baud_out_temp ; 0.126 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -327,8 +327,8 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50_B7A                 ; -0.564 ; -18.352       ;
-; baud_gen:inst7|baud_out_temp ; -0.026 ; -0.271        ;
+; CLOCK_50_B7A                 ; -0.558 ; -18.820       ;
+; baud_gen:inst7|baud_out_temp ; -0.022 ; -0.583        ;
 +------------------------------+--------+---------------+
 
 
@@ -338,18 +338,18 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                         ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                         ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack              ; -7.946   ; 0.141 ; N/A      ; N/A     ; -0.643              ;
-;  CLOCK_50_B7A                 ; -7.946   ; 0.170 ; N/A      ; N/A     ; -0.643              ;
-;  baud_gen:inst7|baud_out_temp ; -4.125   ; 0.141 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS               ; -742.088 ; 0.0   ; 0.0      ; 0.0     ; -187.742            ;
-;  CLOCK_50_B7A                 ; -570.737 ; 0.000 ; N/A      ; N/A     ; -147.019            ;
-;  baud_gen:inst7|baud_out_temp ; -172.480 ; 0.000 ; N/A      ; N/A     ; -41.223             ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
++----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                          ;
++-------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                         ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack              ; -7.905   ; -0.019 ; N/A      ; N/A     ; -0.692              ;
+;  CLOCK_50_B7A                 ; -7.905   ; -0.019 ; N/A      ; N/A     ; -0.692              ;
+;  baud_gen:inst7|baud_out_temp ; -4.091   ; 0.126  ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS               ; -804.597 ; -0.019 ; 0.0      ; 0.0     ; -197.817            ;
+;  CLOCK_50_B7A                 ; -613.296 ; -0.019 ; N/A      ; N/A     ; -151.022            ;
+;  baud_gen:inst7|baud_out_temp ; -193.079 ; 0.000  ; N/A      ; N/A     ; -46.945             ;
++-------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -358,6 +358,9 @@ No synchronizer chains to report.
 ; Pin     ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +---------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; UART_TX ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO[2] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[6] ; 1.2 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[5] ; 1.2 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[4] ; 1.2 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -386,6 +389,7 @@ No synchronizer chains to report.
 ; HEX3[2] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX3[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX3[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; LEDR[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -396,6 +400,7 @@ No synchronizer chains to report.
 ; Pin          ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +--------------+--------------+-----------------+-----------------+
 ; KEY[0]       ; 1.2 V        ; 960 ps          ; 960 ps          ;
+; SW[8]        ; 1.2 V        ; 960 ps          ; 960 ps          ;
 ; CLOCK_50_B7A ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[6]        ; 1.2 V        ; 960 ps          ; 960 ps          ;
 ; SW[7]        ; 1.2 V        ; 960 ps          ; 960 ps          ;
@@ -405,7 +410,6 @@ No synchronizer chains to report.
 ; SW[3]        ; 1.2 V        ; 960 ps          ; 960 ps          ;
 ; SW[4]        ; 1.2 V        ; 960 ps          ; 960 ps          ;
 ; SW[5]        ; 1.2 V        ; 960 ps          ; 960 ps          ;
-; SW[8]        ; 1.2 V        ; 960 ps          ; 960 ps          ;
 +--------------+--------------+-----------------+-----------------+
 
 
@@ -415,6 +419,9 @@ No synchronizer chains to report.
 ; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; UART_TX ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
+; GPIO[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-07 V                    ; 3.12 V              ; -0.169 V            ; 0.165 V                              ; 0.384 V                              ; 4.57e-10 s                  ; 1.75e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.1e-07 V                   ; 3.12 V             ; -0.169 V           ; 0.165 V                             ; 0.384 V                             ; 4.57e-10 s                 ; 1.75e-10 s                 ; Yes                       ; No                        ;
+; GPIO[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.131 V                              ; 0.38 V                               ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.131 V                             ; 0.38 V                              ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
+; GPIO[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-07 V                    ; 3.12 V              ; -0.169 V            ; 0.165 V                              ; 0.384 V                              ; 4.57e-10 s                  ; 1.75e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.1e-07 V                   ; 3.12 V             ; -0.169 V           ; 0.165 V                             ; 0.384 V                             ; 4.57e-10 s                 ; 1.75e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[6] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.09 V                       ; 1.26e-07 V                   ; 1.12 V              ; -0.0464 V           ; 0.081 V                              ; 0.112 V                              ; 6.59e-10 s                  ; 4.71e-10 s                  ; No                         ; No                         ; 1.09 V                      ; 1.26e-07 V                  ; 1.12 V             ; -0.0464 V          ; 0.081 V                             ; 0.112 V                             ; 6.59e-10 s                 ; 4.71e-10 s                 ; No                        ; No                        ;
 ; HEX0[5] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.09 V                       ; 1.12e-07 V                   ; 1.1 V               ; -0.0175 V           ; 0.055 V                              ; 0.073 V                              ; 6.35e-10 s                  ; 4.59e-10 s                  ; No                         ; No                         ; 1.09 V                      ; 1.12e-07 V                  ; 1.1 V              ; -0.0175 V          ; 0.055 V                             ; 0.073 V                             ; 6.35e-10 s                 ; 4.59e-10 s                 ; No                        ; No                        ;
 ; HEX0[4] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.09 V                       ; 1.26e-07 V                   ; 1.12 V              ; -0.0464 V           ; 0.081 V                              ; 0.112 V                              ; 6.59e-10 s                  ; 4.71e-10 s                  ; No                         ; No                         ; 1.09 V                      ; 1.26e-07 V                  ; 1.12 V             ; -0.0464 V          ; 0.081 V                             ; 0.112 V                             ; 6.59e-10 s                 ; 4.71e-10 s                 ; No                        ; No                        ;
@@ -443,6 +450,7 @@ No synchronizer chains to report.
 ; HEX3[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.132 V                              ; 0.377 V                              ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.132 V                             ; 0.377 V                             ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.131 V                              ; 0.38 V                               ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.131 V                             ; 0.38 V                              ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.132 V                              ; 0.377 V                              ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.132 V                             ; 0.377 V                             ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
+; LEDG[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -453,6 +461,9 @@ No synchronizer chains to report.
 ; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; UART_TX ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-05 V                    ; 3.11 V              ; -0.0931 V           ; 0.115 V                              ; 0.142 V                              ; 5.74e-10 s                  ; 3.17e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.1e-05 V                   ; 3.11 V             ; -0.0931 V          ; 0.115 V                             ; 0.142 V                             ; 5.74e-10 s                 ; 3.17e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.147 V                              ; 5.3e-10 s                   ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.147 V                             ; 5.3e-10 s                  ; 3.14e-10 s                 ; Yes                       ; No                        ;
+; GPIO[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-05 V                    ; 3.11 V              ; -0.0931 V           ; 0.115 V                              ; 0.142 V                              ; 5.74e-10 s                  ; 3.17e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.1e-05 V                   ; 3.11 V             ; -0.0931 V          ; 0.115 V                             ; 0.142 V                             ; 5.74e-10 s                 ; 3.17e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX0[6] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.09 V                       ; 1.76e-05 V                   ; 1.11 V              ; -0.0281 V           ; 0.09 V                               ; 0.14 V                               ; 6.73e-10 s                  ; 5.04e-10 s                  ; No                         ; No                         ; 1.09 V                      ; 1.76e-05 V                  ; 1.11 V             ; -0.0281 V          ; 0.09 V                              ; 0.14 V                              ; 6.73e-10 s                 ; 5.04e-10 s                 ; No                        ; No                        ;
 ; HEX0[5] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.09 V                       ; 1.61e-05 V                   ; 1.09 V              ; -0.0084 V           ; 0.066 V                              ; 0.108 V                              ; 6.59e-10 s                  ; 5.03e-10 s                  ; Yes                        ; Yes                        ; 1.09 V                      ; 1.61e-05 V                  ; 1.09 V             ; -0.0084 V          ; 0.066 V                             ; 0.108 V                             ; 6.59e-10 s                 ; 5.03e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX0[4] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.09 V                       ; 1.76e-05 V                   ; 1.11 V              ; -0.0281 V           ; 0.09 V                               ; 0.14 V                               ; 6.73e-10 s                  ; 5.04e-10 s                  ; No                         ; No                         ; 1.09 V                      ; 1.76e-05 V                  ; 1.11 V             ; -0.0281 V          ; 0.09 V                              ; 0.14 V                              ; 6.73e-10 s                 ; 5.04e-10 s                 ; No                        ; No                        ;
@@ -481,6 +492,7 @@ No synchronizer chains to report.
 ; HEX3[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.148 V                              ; 5.31e-10 s                  ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.148 V                             ; 5.31e-10 s                 ; 3.14e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.147 V                              ; 5.3e-10 s                   ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.147 V                             ; 5.3e-10 s                  ; 3.14e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.148 V                              ; 5.31e-10 s                  ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.148 V                             ; 5.31e-10 s                 ; 3.14e-10 s                 ; Yes                       ; No                        ;
+; LEDG[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -491,6 +503,9 @@ No synchronizer chains to report.
 ; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; UART_TX ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; GPIO[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; GPIO[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
+; GPIO[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[6] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.32 V                       ; 2.04e-06 V                   ; 1.41 V              ; -0.082 V            ; 0.189 V                              ; 0.214 V                              ; 2.71e-10 s                  ; 2.9e-10 s                   ; No                         ; No                         ; 1.32 V                      ; 2.04e-06 V                  ; 1.41 V             ; -0.082 V           ; 0.189 V                             ; 0.214 V                             ; 2.71e-10 s                 ; 2.9e-10 s                  ; No                        ; No                        ;
 ; HEX0[5] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.32 V                       ; 1.78e-06 V                   ; 1.36 V              ; -0.0397 V           ; 0.144 V                              ; 0.155 V                              ; 2.76e-10 s                  ; 2.9e-10 s                   ; No                         ; No                         ; 1.32 V                      ; 1.78e-06 V                  ; 1.36 V             ; -0.0397 V          ; 0.144 V                             ; 0.155 V                             ; 2.76e-10 s                 ; 2.9e-10 s                  ; No                        ; No                        ;
 ; HEX0[4] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.32 V                       ; 2.04e-06 V                   ; 1.41 V              ; -0.082 V            ; 0.189 V                              ; 0.214 V                              ; 2.71e-10 s                  ; 2.9e-10 s                   ; No                         ; No                         ; 1.32 V                      ; 2.04e-06 V                  ; 1.41 V             ; -0.082 V           ; 0.189 V                             ; 0.214 V                             ; 2.71e-10 s                 ; 2.9e-10 s                  ; No                        ; No                        ;
@@ -519,6 +534,7 @@ No synchronizer chains to report.
 ; HEX3[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
+; LEDG[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -529,6 +545,9 @@ No synchronizer chains to report.
 ; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; UART_TX ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; GPIO[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; GPIO[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
+; GPIO[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[6] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.32 V                       ; 0.000148 V                   ; 1.39 V              ; -0.0478 V           ; 0.214 V                              ; 0.125 V                              ; 2.99e-10 s                  ; 4.71e-10 s                  ; No                         ; No                         ; 1.32 V                      ; 0.000148 V                  ; 1.39 V             ; -0.0478 V          ; 0.214 V                             ; 0.125 V                             ; 2.99e-10 s                 ; 4.71e-10 s                 ; No                        ; No                        ;
 ; HEX0[5] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.32 V                       ; 0.000132 V                   ; 1.35 V              ; -0.0188 V           ; 0.072 V                              ; 0.082 V                              ; 4.35e-10 s                  ; 4.57e-10 s                  ; No                         ; No                         ; 1.32 V                      ; 0.000132 V                  ; 1.35 V             ; -0.0188 V          ; 0.072 V                             ; 0.082 V                             ; 4.35e-10 s                 ; 4.57e-10 s                 ; No                        ; No                        ;
 ; HEX0[4] ; 1.2 V        ; 0 s                 ; 0 s                 ; 1.32 V                       ; 0.000148 V                   ; 1.39 V              ; -0.0478 V           ; 0.214 V                              ; 0.125 V                              ; 2.99e-10 s                  ; 4.71e-10 s                  ; No                         ; No                         ; 1.32 V                      ; 0.000148 V                  ; 1.39 V             ; -0.0478 V          ; 0.214 V                             ; 0.125 V                             ; 2.99e-10 s                 ; 4.71e-10 s                 ; No                        ; No                        ;
@@ -557,6 +576,7 @@ No synchronizer chains to report.
 ; HEX3[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
+; LEDG[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -566,10 +586,10 @@ No synchronizer chains to report.
 +------------------------------+------------------------------+----------+----------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
-; baud_gen:inst7|baud_out_temp ; baud_gen:inst7|baud_out_temp ; 1853     ; 0        ; 0        ; 0        ;
-; CLOCK_50_B7A                 ; baud_gen:inst7|baud_out_temp ; 6        ; 0        ; 0        ; 0        ;
-; baud_gen:inst7|baud_out_temp ; CLOCK_50_B7A                 ; 1        ; 1        ; 0        ; 0        ;
-; CLOCK_50_B7A                 ; CLOCK_50_B7A                 ; 24388    ; 0        ; 0        ; 0        ;
+; baud_gen:inst7|baud_out_temp ; baud_gen:inst7|baud_out_temp ; 2265     ; 0        ; 0        ; 0        ;
+; CLOCK_50_B7A                 ; baud_gen:inst7|baud_out_temp ; 15       ; 0        ; 0        ; 0        ;
+; baud_gen:inst7|baud_out_temp ; CLOCK_50_B7A                 ; 5        ; 1        ; 0        ; 0        ;
+; CLOCK_50_B7A                 ; CLOCK_50_B7A                 ; 24487    ; 0        ; 0        ; 0        ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -579,10 +599,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------+------------------------------+----------+----------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
-; baud_gen:inst7|baud_out_temp ; baud_gen:inst7|baud_out_temp ; 1853     ; 0        ; 0        ; 0        ;
-; CLOCK_50_B7A                 ; baud_gen:inst7|baud_out_temp ; 6        ; 0        ; 0        ; 0        ;
-; baud_gen:inst7|baud_out_temp ; CLOCK_50_B7A                 ; 1        ; 1        ; 0        ; 0        ;
-; CLOCK_50_B7A                 ; CLOCK_50_B7A                 ; 24388    ; 0        ; 0        ; 0        ;
+; baud_gen:inst7|baud_out_temp ; baud_gen:inst7|baud_out_temp ; 2265     ; 0        ; 0        ; 0        ;
+; CLOCK_50_B7A                 ; baud_gen:inst7|baud_out_temp ; 15       ; 0        ; 0        ; 0        ;
+; baud_gen:inst7|baud_out_temp ; CLOCK_50_B7A                 ; 5        ; 1        ; 0        ; 0        ;
+; CLOCK_50_B7A                 ; CLOCK_50_B7A                 ; 24487    ; 0        ; 0        ; 0        ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -607,9 +627,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 10    ; 10   ;
-; Unconstrained Input Port Paths  ; 589   ; 589  ;
-; Unconstrained Output Ports      ; 30    ; 30   ;
-; Unconstrained Output Port Paths ; 408   ; 408  ;
+; Unconstrained Input Port Paths  ; 602   ; 602  ;
+; Unconstrained Output Ports      ; 34    ; 34   ;
+; Unconstrained Output Port Paths ; 412   ; 412  ;
 +---------------------------------+-------+------+
 
 
@@ -646,6 +666,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; GPIO[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -674,6 +697,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; UART_TX     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -702,6 +726,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; GPIO[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -730,6 +757,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; UART_TX     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -741,7 +769,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Mar 22 11:36:07 2021
+    Info: Processing started: Sat Mar 27 11:55:26 2021
 Info: Command: quartus_sta fibonacci -c fibonacci
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -759,96 +787,96 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.486
+Info (332146): Worst-case setup slack is -7.556
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.486            -563.553 CLOCK_50_B7A 
-    Info (332119):    -4.125            -172.480 baud_gen:inst7|baud_out_temp 
-Info (332146): Worst-case hold slack is 0.435
+    Info (332119):    -7.556            -604.941 CLOCK_50_B7A 
+    Info (332119):    -4.091            -193.079 baud_gen:inst7|baud_out_temp 
+Info (332146): Worst-case hold slack is 0.342
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.435               0.000 CLOCK_50_B7A 
-    Info (332119):     0.504               0.000 baud_gen:inst7|baud_out_temp 
+    Info (332119):     0.342               0.000 CLOCK_50_B7A 
+    Info (332119):     0.425               0.000 baud_gen:inst7|baud_out_temp 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.565
+Info (332146): Worst-case minimum pulse width slack is -0.647
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.565            -141.247 CLOCK_50_B7A 
-    Info (332119):    -0.538             -41.223 baud_gen:inst7|baud_out_temp 
+    Info (332119):    -0.647            -145.988 CLOCK_50_B7A 
+    Info (332119):    -0.538             -46.945 baud_gen:inst7|baud_out_temp 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.946
+Info (332146): Worst-case setup slack is -7.905
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.946            -570.737 CLOCK_50_B7A 
-    Info (332119):    -4.111            -171.351 baud_gen:inst7|baud_out_temp 
-Info (332146): Worst-case hold slack is 0.440
+    Info (332119):    -7.905            -613.296 CLOCK_50_B7A 
+    Info (332119):    -3.937            -191.301 baud_gen:inst7|baud_out_temp 
+Info (332146): Worst-case hold slack is -0.019
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.440               0.000 CLOCK_50_B7A 
-    Info (332119):     0.491               0.000 baud_gen:inst7|baud_out_temp 
+    Info (332119):    -0.019              -0.019 CLOCK_50_B7A 
+    Info (332119):     0.429               0.000 baud_gen:inst7|baud_out_temp 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.643
+Info (332146): Worst-case minimum pulse width slack is -0.692
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.643            -147.019 CLOCK_50_B7A 
-    Info (332119):    -0.538             -40.723 baud_gen:inst7|baud_out_temp 
+    Info (332119):    -0.692            -151.022 CLOCK_50_B7A 
+    Info (332119):    -0.538             -46.795 baud_gen:inst7|baud_out_temp 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.651
+Info (332146): Worst-case setup slack is -3.564
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.651            -196.825 CLOCK_50_B7A 
-    Info (332119):    -1.682             -66.555 baud_gen:inst7|baud_out_temp 
-Info (332146): Worst-case hold slack is 0.153
+    Info (332119):    -3.564            -215.150 CLOCK_50_B7A 
+    Info (332119):    -1.643             -81.049 baud_gen:inst7|baud_out_temp 
+Info (332146): Worst-case hold slack is 0.145
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.153               0.000 baud_gen:inst7|baud_out_temp 
+    Info (332119):     0.145               0.000 baud_gen:inst7|baud_out_temp 
     Info (332119):     0.180               0.000 CLOCK_50_B7A 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.561
+Info (332146): Worst-case minimum pulse width slack is -0.579
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.561             -18.787 CLOCK_50_B7A 
-    Info (332119):    -0.073              -1.218 baud_gen:inst7|baud_out_temp 
+    Info (332119):    -0.579             -19.309 CLOCK_50_B7A 
+    Info (332119):    -0.061              -1.636 baud_gen:inst7|baud_out_temp 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.416
+Info (332146): Worst-case setup slack is -3.292
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.416            -169.409 CLOCK_50_B7A 
-    Info (332119):    -1.500             -59.297 baud_gen:inst7|baud_out_temp 
-Info (332146): Worst-case hold slack is 0.141
+    Info (332119):    -3.292            -186.355 CLOCK_50_B7A 
+    Info (332119):    -1.509             -71.047 baud_gen:inst7|baud_out_temp 
+Info (332146): Worst-case hold slack is 0.009
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.141               0.000 baud_gen:inst7|baud_out_temp 
-    Info (332119):     0.170               0.000 CLOCK_50_B7A 
+    Info (332119):     0.009               0.000 CLOCK_50_B7A 
+    Info (332119):     0.126               0.000 baud_gen:inst7|baud_out_temp 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.564
+Info (332146): Worst-case minimum pulse width slack is -0.558
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.564             -18.352 CLOCK_50_B7A 
-    Info (332119):    -0.026              -0.271 baud_gen:inst7|baud_out_temp 
+    Info (332119):    -0.558             -18.820 CLOCK_50_B7A 
+    Info (332119):    -0.022              -0.583 baud_gen:inst7|baud_out_temp 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5121 megabytes
-    Info: Processing ended: Mon Mar 22 11:36:26 2021
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 5123 megabytes
+    Info: Processing ended: Sat Mar 27 11:56:00 2021
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:35
 
 

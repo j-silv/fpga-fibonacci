@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fibonacci
-Mon Mar 22 11:34:19 2021
+Sat Mar 27 11:53:34 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,22 +13,24 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |system|controller:inst8|state
-  9. State Machine - |system|uart:inst|state
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: uart:inst
- 14. Parameter Settings for User Entity Instance: controller:inst8
- 15. Parameter Settings for User Entity Instance: edge_divider:inst3
- 16. Parameter Settings for User Entity Instance: baud_gen:inst7
- 17. Parameter Settings for User Entity Instance: fibonacci_gen:inst2
- 18. Parameter Settings for User Entity Instance: n_ledseg_decoder:inst1
- 19. Parameter Settings for User Entity Instance: bin2bcd:inst6
- 20. Parameter Settings for User Entity Instance: blinky:inst5
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+  8. State Machine - |system|system_control:inst8|state
+  9. State Machine - |system|uart_control:inst9|state
+ 10. State Machine - |system|uart_transmit:inst|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: uart_transmit:inst
+ 16. Parameter Settings for User Entity Instance: system_control:inst8
+ 17. Parameter Settings for User Entity Instance: edge_divider:inst3
+ 18. Parameter Settings for User Entity Instance: baud_gen:inst7
+ 19. Parameter Settings for User Entity Instance: fibonacci_gen:inst2
+ 20. Parameter Settings for User Entity Instance: n_ledseg_decoder:inst1
+ 21. Parameter Settings for User Entity Instance: bin2bcd:inst6
+ 22. Parameter Settings for User Entity Instance: blinky:inst5
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -54,14 +56,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Mar 22 11:34:19 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Mar 27 11:53:34 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; fibonacci                                   ;
 ; Top-level Entity Name           ; system                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 221                                         ;
-; Total pins                      ; 41                                          ;
+; Total registers                 ; 224                                         ;
+; Total pins                      ; 45                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -183,7 +185,9 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                               ; Library ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; hdl/controller.vhd               ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/controller.vhd       ;         ;
+; hdl/uart_transmit.vhd            ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart_transmit.vhd    ;         ;
+; hdl/uart_control.vhd             ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart_control.vhd     ;         ;
+; hdl/system_control.vhd           ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/system_control.vhd   ;         ;
 ; schematic/system.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/schematic/system.bdf     ;         ;
 ; hdl/char_select.vhd              ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/char_select.vhd      ;         ;
 ; hdl/digit_types.vhd              ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/digit_types.vhd      ;         ;
@@ -191,38 +195,37 @@ refer to the applicable agreement for further details.
 ; hdl/ledseg_decoder.vhd           ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/ledseg_decoder.vhd   ;         ;
 ; hdl/bin2bcd.vhd                  ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/bin2bcd.vhd          ;         ;
 ; hdl/fibonacci_gen.vhd            ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/fibonacci_gen.vhd    ;         ;
-; hdl/uart.vhd                     ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd             ;         ;
 ; hdl/edge_divider.vhd             ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/edge_divider.vhd     ;         ;
 ; hdl/blinky.vhd                   ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/blinky.vhd           ;         ;
 ; hdl/baud_gen.vhd                 ; yes             ; User VHDL File                     ; C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd         ;         ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Estimate of Logic utilization (ALMs needed) ; 232                ;
-;                                             ;                    ;
-; Combinational ALUT usage for logic          ; 389                ;
-;     -- 7 input functions                    ; 0                  ;
-;     -- 6 input functions                    ; 73                 ;
-;     -- 5 input functions                    ; 39                 ;
-;     -- 4 input functions                    ; 46                 ;
-;     -- <=3 input functions                  ; 231                ;
-;                                             ;                    ;
-; Dedicated logic registers                   ; 221                ;
-;                                             ;                    ;
-; I/O pins                                    ; 41                 ;
-;                                             ;                    ;
-; Total DSP Blocks                            ; 0                  ;
-;                                             ;                    ;
-; Maximum fan-out node                        ; CLOCK_50_B7A~input ;
-; Maximum fan-out                             ; 175                ;
-; Total fan-out                               ; 2194               ;
-; Average fan-out                             ; 3.17               ;
-+---------------------------------------------+--------------------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 233          ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 391          ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 73           ;
+;     -- 5 input functions                    ; 35           ;
+;     -- 4 input functions                    ; 50           ;
+;     -- <=3 input functions                  ; 233          ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 224          ;
+;                                             ;              ;
+; I/O pins                                    ; 45           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 185          ;
+; Total fan-out                               ; 2250         ;
+; Average fan-out                             ; 3.19         ;
++---------------------------------------------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -230,11 +233,10 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name      ; Library Name ;
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+------------------+--------------+
-; |system                                          ; 389 (1)             ; 221 (0)                   ; 0                 ; 0          ; 41   ; 0            ; |system                                                                 ; system           ; work         ;
+; |system                                          ; 391 (1)             ; 224 (0)                   ; 0                 ; 0          ; 45   ; 0            ; |system                                                                 ; system           ; work         ;
 ;    |baud_gen:inst7|                              ; 46 (46)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |system|baud_gen:inst7                                                  ; baud_gen         ; work         ;
 ;    |bin2bcd:inst6|                               ; 62 (62)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|bin2bcd:inst6                                                   ; bin2bcd          ; work         ;
 ;    |blinky:inst5|                                ; 53 (53)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |system|blinky:inst5                                                    ; blinky           ; work         ;
-;    |controller:inst8|                            ; 42 (42)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |system|controller:inst8                                                ; controller       ; work         ;
 ;    |edge_divider:inst3|                          ; 52 (52)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |system|edge_divider:inst3                                              ; edge_divider     ; work         ;
 ;    |fibonacci_gen:inst2|                         ; 50 (50)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |system|fibonacci_gen:inst2                                             ; fibonacci_gen    ; work         ;
 ;    |n_ledseg_decoder:inst1|                      ; 28 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1                                          ; n_ledseg_decoder ; work         ;
@@ -242,14 +244,16 @@ refer to the applicable agreement for further details.
 ;       |ledseg_decoder:\build_n_digits:1:decoder| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:1:decoder ; ledseg_decoder   ; work         ;
 ;       |ledseg_decoder:\build_n_digits:2:decoder| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:2:decoder ; ledseg_decoder   ; work         ;
 ;       |ledseg_decoder:\build_n_digits:3:decoder| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|n_ledseg_decoder:inst1|ledseg_decoder:\build_n_digits:3:decoder ; ledseg_decoder   ; work         ;
-;    |uart:inst|                                   ; 55 (55)             ; 46 (46)                   ; 0                 ; 0          ; 0    ; 0            ; |system|uart:inst                                                       ; uart             ; work         ;
+;    |system_control:inst8|                        ; 44 (44)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |system|system_control:inst8                                            ; system_control   ; work         ;
+;    |uart_control:inst9|                          ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |system|uart_control:inst9                                              ; uart_control     ; work         ;
+;    |uart_transmit:inst|                          ; 50 (50)             ; 44 (44)                   ; 0                 ; 0          ; 0    ; 0            ; |system|uart_transmit:inst                                              ; uart_transmit    ; work         ;
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------+
-; State Machine - |system|controller:inst8|state                                  ;
+; State Machine - |system|system_control:inst8|state                              ;
 +----------------------+----------------------+----------------------+------------+
 ; Name                 ; state.BEGIN_TRANSMIT ; state.DELAY_TRANSMIT ; state.IDLE ;
 +----------------------+----------------------+----------------------+------------+
@@ -260,17 +264,38 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |system|uart:inst|state                                                                                 ;
-+----------------------+------------------+---------------------+---------------------+----------------------+------------+
-; Name                 ; state.WAIT_RESET ; state.STOP_TRANSMIT ; state.DATA_TRANSMIT ; state.START_TRANSMIT ; state.IDLE ;
-+----------------------+------------------+---------------------+---------------------+----------------------+------------+
-; state.IDLE           ; 0                ; 0                   ; 0                   ; 0                    ; 0          ;
-; state.START_TRANSMIT ; 0                ; 0                   ; 0                   ; 1                    ; 1          ;
-; state.DATA_TRANSMIT  ; 0                ; 0                   ; 1                   ; 0                    ; 1          ;
-; state.STOP_TRANSMIT  ; 0                ; 1                   ; 0                   ; 0                    ; 1          ;
-; state.WAIT_RESET     ; 1                ; 0                   ; 0                   ; 0                    ; 1          ;
-+----------------------+------------------+---------------------+---------------------+----------------------+------------+
++------------------------------------------------------------------------------------+
+; State Machine - |system|uart_control:inst9|state                                   ;
++------------------+------------------+----------------+----------------+------------+
+; Name             ; state.WAIT_RESET ; state.WAIT_EOT ; state.WAIT_ACK ; state.IDLE ;
++------------------+------------------+----------------+----------------+------------+
+; state.IDLE       ; 0                ; 0              ; 0              ; 0          ;
+; state.WAIT_ACK   ; 0                ; 0              ; 1              ; 1          ;
+; state.WAIT_EOT   ; 0                ; 1              ; 0              ; 1          ;
+; state.WAIT_RESET ; 1                ; 0              ; 0              ; 1          ;
++------------------+------------------+----------------+----------------+------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |system|uart_transmit:inst|state          ;
++---------------+--------------+---------------+------------+
+; Name          ; state.END_TX ; state.DATA_TX ; state.IDLE ;
++---------------+--------------+---------------+------------+
+; state.IDLE    ; 0            ; 0             ; 0          ;
+; state.DATA_TX ; 0            ; 1             ; 1          ;
+; state.END_TX  ; 1            ; 0             ; 1          ;
++---------------+--------------+---------------+------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; uart_transmit:inst|state.END_TX       ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -278,12 +303,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 221   ;
+; Total registers                              ; 224   ;
 ; Number of registers using Synchronous Clear  ; 192   ;
 ; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 73    ;
+; Number of registers using Asynchronous Clear ; 117   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 104   ;
+; Number of registers using Clock Enable       ; 103   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -293,41 +318,43 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; uart:inst|tx                           ; 2       ;
-; Total number of inverted registers = 1 ;         ;
+; uart_transmit:inst|UART_TX             ; 3       ;
+; uart_transmit:inst|TX_DONE             ; 5       ;
+; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |system|fibonacci_gen:inst2|terme_actuel[6] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|blinky:inst5|num_cycles[21]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|edge_divider:inst3|num_cycles[26]   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |system|uart:inst|shift_register[2]         ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |system|controller:inst8|count[7]           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |system|fibonacci_gen:inst2|terme_actuel[13] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|blinky:inst5|num_cycles[28]          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|edge_divider:inst3|num_cycles[5]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |system|system_control:inst8|count[9]        ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |system|uart_transmit:inst|shift_register[4] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |system|uart_transmit:inst|shift_register[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart:inst ;
-+----------------+-------+-------------------------------+
-; Parameter Name ; Value ; Type                          ;
-+----------------+-------+-------------------------------+
-; data_length    ; 8     ; Signed Integer                ;
-+----------------+-------+-------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_transmit:inst ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; data_length    ; 8     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: controller:inst8 ;
-+-----------------+-------+-------------------------------------+
-; Parameter Name  ; Value ; Type                                ;
-+-----------------+-------+-------------------------------------+
-; clk_cycle_delay ; 1     ; Signed Integer                      ;
-+-----------------+-------+-------------------------------------+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: system_control:inst8 ;
++-----------------+-------+-----------------------------------------+
+; Parameter Name  ; Value ; Type                                    ;
++-----------------+-------+-----------------------------------------+
+; clk_cycle_delay ; 5     ; Signed Integer                          ;
++-----------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -397,31 +424,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 221                         ;
-;     CLR               ; 10                          ;
+; arriav_ff             ; 224                         ;
+;     CLR               ; 15                          ;
 ;     CLR SCLR          ; 31                          ;
-;     ENA               ; 8                           ;
-;     ENA CLR SCLR      ; 32                          ;
-;     ENA SCLR          ; 64                          ;
+;     ENA CLR           ; 7                           ;
+;     ENA CLR SCLR      ; 64                          ;
+;     ENA SCLR          ; 32                          ;
 ;     SCLR              ; 65                          ;
 ;     SLD               ; 9                           ;
-;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 394                         ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 396                         ;
 ;     arith             ; 184                         ;
 ;         1 data inputs ; 167                         ;
 ;         2 data inputs ; 17                          ;
-;     normal            ; 210                         ;
+;     normal            ; 212                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 38                          ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 46                          ;
-;         5 data inputs ; 39                          ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 50                          ;
+;         5 data inputs ; 35                          ;
 ;         6 data inputs ; 73                          ;
-; boundary_port         ; 41                          ;
+; boundary_port         ; 45                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 4.49                        ;
+; Average LUT depth     ; 4.46                        ;
 +-----------------------+-----------------------------+
 
 
@@ -430,7 +457,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -440,15 +467,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Mar 22 11:33:35 2021
+    Info: Processing started: Sat Mar 27 11:52:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fibonacci -c fibonacci
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/uart_transmit.vhd
+    Info (12022): Found design unit 1: uart_transmit-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart_transmit.vhd Line: 51
+    Info (12023): Found entity 1: uart_transmit File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart_transmit.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/uart_control.vhd
+    Info (12022): Found design unit 1: uart_control-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart_control.vhd Line: 43
+    Info (12023): Found entity 1: uart_control File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart_control.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/system_control.vhd
+    Info (12022): Found design unit 1: system_control-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/system_control.vhd Line: 32
+    Info (12023): Found entity 1: system_control File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/system_control.vhd Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pins.v
     Info (12023): Found entity 1: pins File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/pins.v Line: 38
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/controller.vhd
-    Info (12022): Found design unit 1: controller-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/controller.vhd Line: 26
-    Info (12023): Found entity 1: controller File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/controller.vhd Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file schematic/system.bdf
     Info (12023): Found entity 1: system
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/char_select.vhd
@@ -468,9 +501,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/bin
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/fibonacci_gen.vhd
     Info (12022): Found design unit 1: fibonacci_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/fibonacci_gen.vhd Line: 40
     Info (12023): Found entity 1: fibonacci_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/fibonacci_gen.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/uart.vhd
-    Info (12022): Found design unit 1: uart-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd Line: 21
-    Info (12023): Found entity 1: uart File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/uart.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/edge_divider.vhd
     Info (12022): Found design unit 1: edge_divider-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/edge_divider.vhd Line: 16
     Info (12023): Found entity 1: edge_divider File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/edge_divider.vhd Line: 4
@@ -481,8 +511,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/bau
     Info (12022): Found design unit 1: baud_gen-logic File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 25
     Info (12023): Found entity 1: baud_gen File: C:/Users/idontseeit/Desktop/Justins_Files/Projects/fpga_fibonacci/hdl/baud_gen.vhd Line: 11
 Info (12127): Elaborating entity "system" for the top level hierarchy
-Info (12128): Elaborating entity "uart" for hierarchy "uart:inst"
-Info (12128): Elaborating entity "controller" for hierarchy "controller:inst8"
+Info (12128): Elaborating entity "uart_transmit" for hierarchy "uart_transmit:inst"
+Info (12128): Elaborating entity "uart_control" for hierarchy "uart_control:inst9"
+Info (12128): Elaborating entity "system_control" for hierarchy "system_control:inst8"
 Info (12128): Elaborating entity "edge_divider" for hierarchy "edge_divider:inst3"
 Info (12128): Elaborating entity "baud_gen" for hierarchy "baud_gen:inst7"
 Info (12128): Elaborating entity "char_select" for hierarchy "char_select:inst4"
@@ -492,16 +523,17 @@ Info (12128): Elaborating entity "ledseg_decoder" for hierarchy "n_ledseg_decode
 Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:inst6"
 Info (12128): Elaborating entity "blinky" for hierarchy "blinky:inst5"
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 494 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 499 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 30 output pins
-    Info (21061): Implemented 453 logic cells
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 454 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Mon Mar 22 11:34:19 2021
-    Info: Elapsed time: 00:00:44
-    Info: Total CPU time (on all processors): 00:01:10
+    Info: Processing ended: Sat Mar 27 11:53:34 2021
+    Info: Elapsed time: 00:00:51
+    Info: Total CPU time (on all processors): 00:01:32
 
 
