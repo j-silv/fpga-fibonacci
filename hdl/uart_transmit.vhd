@@ -123,6 +123,7 @@ begin
                 -- so that the STOP bit has time to be sent
                 when END_TX =>
                     TX_DONE <= '1';
+                    state <= IDLE;
 
             end case;
         end if;
