@@ -17,6 +17,15 @@
 -- indicate to uart_control block that transmission is done
 -- by setting TX_DONE flag high
 ------------------------------------------------------------
+--________________________________________________
+-- transmission example with data: 0b11001010     |
+--                                                |
+-- CLK: ‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_‾_  |
+--                                                |
+-- TX:   ‾‾‾‾‾_  _  ‾  _  ‾  _  _  ‾  ‾  ‾‾‾‾‾‾‾  |
+--       ^^^^ ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^^^^  |
+--      |IDLE|SA|D0|D1|D2|D3|D4|D5|D6|D7|SP|IDLE| |
+--‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -105,16 +114,18 @@ begin
                         state <= END_TX;
 
                     else
-                        -- serial out the MSB of the shift_register
-                        UART_TX <= shift_register(DATA_LENGTH - 1);
+                        -- serial out the LSB of the shift_register
+                        UART_TX <= shift_register(0);
 
                         -- increment number of bits sent
                         bits_sent := bits_sent + 1;
 
                         -- shift bits
                         for i in 0 to (DATA_LENGTH - 2) loop
-                            shift_register(i + 1) <= shift_register(i);
+                            shift_register(i) <= shift_register(i + 1);
                         end loop;
+
+
 
                         state <= DATA_TX;
                     end if;
