@@ -57,8 +57,10 @@ begin
                 terme_precedent <= (others => '0');
                 overflow <= '0';
 
-                -- remet à 1 et pas à 0, car 0 est un terme dans la suite de Fibonacci
-                count_nb_termes <= std_logic_vector(to_unsigned(1, count_nb_termes'length));
+                -- remet à 0 et pas à 1, meme si 0 est un terme dans la suite de Fibonacci
+                -- je fais cela car sinon la valeur demande par le nb_termes en entree est toujours
+                -- une unite plus grande que ce qui est compte par le sequence_number 
+                count_nb_termes <= (others => '0');
 
             -- est-ce qu'on continue à générer le prochain nombre de la suite de Fibonacci?
             elsif enable = '1' then
